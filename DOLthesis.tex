@@ -1,0 +1,190 @@
+\documentclass[12pt,a4paper]{DOLthesis}  
+%\documentclass[12pt,a4paper,twoside]{DOLthesis}  %twoside document
+%load any additional packages
+\usepackage[british]{babel}
+% To ammend errors and warnings
+\RequirePackage{etex}
+\usepackage{csquotes}
+%%
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{multirow,bigdelim,dcolumn,booktabs}
+\usepackage{graphicx}
+\usepackage{floatrow}
+\usepackage{subfig}
+\usepackage{pgfplots}
+\pgfplotsset{width=0.8\linewidth,compat=1.9}
+\usepackage{chemfig} 			%for chemical structures
+\setatomsep{2.5em}                %bond length. 3em is the standard
+
+\usepackage{tkz-fct}
+\usetikzlibrary{external}		%to speed up figures
+%\tikzexternalize[prefix=tikz/]%,shell escape=-enable-write1 --shell-escape,prefix=tikz/, mode=graphics if exists, export=false, optimize=false
+% \tikzset{
+% 	png export/.style={
+% 		external/system call/.add=
+% 		{}
+% 		{; convert -density 300 -transparent white "\image.pdf" -quality 100 "\image.png";},
+% 		%
+% 		/pgf/images/external info,
+% 		/pgf/images/include external/.code={%
+% 			\includegraphics
+% 			[width=\pgfexternalwidth,height=\pgfexternalheight]
+% 			{##1.png}%
+% 		}
+% 	}
+% }
+
+\usepackage[style=nature,%chem-acs,%phys,nature
+sorting=none,sortcites=true, giveninits=true,hyperref, doi=false,eprint=false,url=false,isbn=false]{biblatex}	
+\addbibresource{refs_new.bib}
+\addbibresource{mendeley_refs.bib}
+\AtEveryBibitem{\clearfield{note}}
+\renewbibmacro{in:}{}
+
+\usepackage{booktabs}
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage[left=2cm,top=3cm,right=2cm,bottom=3cm,bindingoffset=1cm]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[page,toc,titletoc,title]{appendix}
+\usepackage[justification=centering]{caption}
+\captionsetup{font={stretch=1.5}}
+\usepackage{textcomp}
+\usepackage{pdfpages} 
+\usepackage{hyperref}
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+  
+\usepackage{sectsty}
+\chapterfont{\centering}              %this centers the chapters title
+
+\usepackage{blindtext}
+
+%these packages are for captions on top of tables
+\usepackage{float}			
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\usepackage[doublespacing]{setspace}        %double space
+
+\usepackage{longtable}
+\usepackage[acronym]{glossaries}
+\usepackage{glossary-mcols}
+\makenoidxglossaries
+\input{others/abbreviations.tex}
+%
+\usepackage{fancyhdr}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+%\fancyhf{}                                  %cleans the default headings and footers
+\fancyhead[L]{\MakeUppercase\chaptername\space\thechapter}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+
+
+\setlength{\headheight}{14.50pt}            % ...at least 14.49998pt by the warning
+
+%\title{MANIPULATION OF ION CHEMISTRY PROCESSES FOR IMPROVEMENTS IN SELECTIVITY IN PROTON TRANSFER REACTION MASS SPECTROMETRY} 
+\title{[my thesis title goes here]}
+\author{David Olivenza-Le\'on}             %your name
+\college{School of Physics and Astronomy}  %your college
+\degree{Doctor of Philosophy}     %the degree
+\degreedate{\monthyeardate\today}         %the degree date
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%end the preamble and start the document
+\begin{document}
+
+% this is for chemfig
+\setcrambond{3pt}{}{}		% thickness of bold lines
+\setbondoffset{3pt}			% distance bond-letter
+\newcommand{\bondwidth}{0.06642 em} % 'Line Width'
+\setbondstyle{line width = \bondwidth}
+\makeatletter
+\def\CF@cycle@inraduiscoeff{0.8}		%radius of aromatic rings (default = 0.75)
+\makeatother
+
+%subfigures
+\floatsetup[figure]{style=plain,subcapbesideposition=top} 
+
+%this baselineskip gives sufficient line spacing for an examiner to easily
+%markup the thesis with comments
+%\baselineskip=18pt plus1pt
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\renewcommand*\contentsname{Table of Contents}
+
+
+\maketitle                          % create a title page from the preamble info
+%\includepdf[pages=-]{letter for the repository.pdf}
+\doublespacing
+\include{others/abstract}           % include the abstract
+\include{others/dedication}         % include a dedication.tex file
+\include{others/acknowlegements}    % include an acknowledgements.tex file
+
+
+		%\begin{singlespace}
+%this is to remove the page number from table of contents
+\pagestyle{empty}
+{
+  \renewcommand{\thispagestyle}[1]{}
+  \tableofcontents
+}
+\clearpage
+\pagestyle{plain}
+		%\end{singlespace}
+\begin{romanpages}                  % start roman page numbering
+		%\begin{singlespace}
+\listoffigures                      % generate and include a list of figures
+\listoftables                       % generate and include a list of tables
+\clearpage
+		%\end{singlespace}
+		%\begin{singlespace}
+\setlist[description]{leftmargin=!, labelwidth=6em} % Change for glossaries
+\printnoidxglossary[type=\acronymtype,title=List of Abbreviations,nonumberlist,sort=letter] %this creates the list of abreviations, from the acronym list, without numbers (nonumberlist), and alphabetically sorted (sort=letter).
+
+%\printnoidxglossary[type=\acronymtype,title=List of Abbreviations, nonumberlist, sort=letter, style=mcolindex] %this creates the list of abreviations, from the acronym list, without numbers (nonumberlist), in two columns (mcolindex), and alphabetically sorted (sort=letter).
+\setlist[description]{style=standard} % reset settings back to default
+		%\end{singlespace}
+\end{romanpages}                    % end roman page numbering
+%now include the files of latex for each of the chapters etc
+\pagestyle{fancy}
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/chapter6}
+\include{chapters/chapter7}
+\include{chapters/conclusions}
+
+%\nocite{*}
+%next line changes bibliography name to references
+\renewcommand{\bibname}{References}
+\addcontentsline{toc}{chapter}{References}
+\printbibliography
+\newpage
+
+
+%now enable appendix numbering format and include any appendices
+\appendix
+
+\fancyhead{}    % this cleans the header
+\renewcommand{\headrulewidth}{0pt} %this deletes the horizontal line
+
+\begin{appendices}
+\include{appendix/papers}
+\include{appendix/physical_properties}
+%\include{appendix/code}
+\end{appendices}
+
+\end{document}
+

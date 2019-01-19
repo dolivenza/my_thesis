@@ -1,0 +1,84 @@
+\chapter{OTHER STUFF}
+\markboth{OTHER STUFF}{}
+
+
+
+
+\section{Benzene standard}
+Esto lo puedo poner en la descripcion del aparato, a modo de ilustracion
+
+
+
+
+\begin{figure}
+  \sidesubfloat[]{\scalebox{0.7}{\begin{tikzpicture}\chemfig{*6(-=-=(-[::-60,,,,white]\phantom{Cl})-=)}\end{tikzpicture}}
+  \label{fig:bnz1}}
+\qquad \qquad
+  \sidesubfloat[]{\scalebox{0.7}{\begin{tikzpicture}\chemfig{
+*6(-=(-[::-60]Cl)-=(-[::-60]Cl)-(-[::-60]Cl)=)}\end{tikzpicture}}
+\label{fig:bnz2}}
+  \caption{Structure of (a) benzene and (b) 1,2,4-trichlorobenzene.}
+  \label{fig:bnz}
+\end{figure}
+
+
+
+\begin{figure}
+\scalebox{0.7}{
+%\schemedebug{true}
+\begin{tikzpicture}
+\schemestart
+\chemfig[yshift=5em]{*6(-=-=(-[::-60,,,,white]\phantom{Cl})-=)}
+\arrow{0}[,0]\+
+\chemfig{H_3O^+}
+\arrow
+\chemfig[yshift=5em]{*6(-=-=(-[::-60]H^+)-=)}
+\arrow{0}[,0]  %this arrow is to align
+\+
+\chemfig{H_2O}
+\schemestop
+\end{tikzpicture}
+}
+\label{fig:bnzr}
+\caption{Benzene reaction example.}
+\end{figure}
+
+
+
+\section{DPM - humidity dependence}
+\begin{figure}%[h]
+\centering
+\includegraphics[width=0.48\linewidth]{pics/DPM_clusters_littoral.pdf}
+\includegraphics[width=0.48\linewidth]{pics/DPM_BR_lit.pdf}
+
+\includegraphics[width=0.48\linewidth]{pics/DPM_clusters_lynx_humid.pdf}
+\includegraphics[width=0.48\linewidth]{pics/DPM_humid_DC_lynx.pdf}
+
+\includegraphics[width=0.48\linewidth]{pics/DPM_clusters_lynx_dry.pdf}
+\includegraphics[width=0.48\linewidth]{pics/DPM_dry_DC_lynx.pdf}
+\caption{DPM product ion distribution plots from  Littoral (top right) and Lynx in humid (middle right) and in dry (bottom right) conditions in DC mode.}
+\label{dpm}
+\end{figure}
+
+\begin{figure}%[h]
+\centering
+\includegraphics[width=0.48\linewidth]{pics/DPM_clusters_humid_RF.pdf}
+\includegraphics[width=0.48\linewidth]{pics/DPM_humid_RF.pdf}
+
+\includegraphics[width=0.48\linewidth]{pics/DPM_clusters_dry_RF.pdf}
+\includegraphics[width=0.48\linewidth]{pics/DPM_dry_RF.pdf}
+\caption{DPM product ion distribution plots from Lynx in humid (top) and  dry (bottom) conditions in RF mode.}
+\label{dpm2}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+

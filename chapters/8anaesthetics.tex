@@ -1,0 +1,154 @@
+
+
+\chapter{Studies pertaining to the monitoring of isoflurane and sevoflurane by proton transfer reaction mass spectrometry}
+
+\markboth{Anaesthetics in PTR-MS}{}
+
+[This chapter might be deleted if the thesis gets too long]
+
+
+\section{Introduction}
+\section{Methodology}
+\subsection{PTR-MS vs SIFT-MS vs SIFDT-MS}
+
+
+
+
+
+The home-built \acrshort{sifdtms} instrument at the Heyrovsky Institute of Physical Chemistry of the Academy of Sciences in Prague (Czech Republic) has been described in detail elsewhere \cite{doi:10.1021/acs.analchem.5b02994}.
+
+The calculation of the rate constant comes from Su \cite{su1994parametrization}.
+
+The data for $\alpha$ and $\mu_D$ can be found in \cite{lide2012crc}.
+
+
+
+
+
+
+
+\subsection{Isoflurane and sevoflurane}
+
+\begin{figure}
+\sidesubfloat[]{\includegraphics[width=0.2\textwidth]{pics/ISOF_structure.png}}
+  %\sidesubfloat[]{\scalebox{0.7}{\begin{tikzpicture}\chemfig{[:30]F-(-[::90]F)(-[::-90]F)-(-[::60]Cl(-[::-60,2,,,white]\phantom{Cl}))(-[::-120,0.8]H)-[::-60]O-[::60](-[::60]F)-[::-60]F}\end{tikzpicture}}\label{fig:iso1}}
+%\qquad 
+  %\sidesubfloat[]{\scalebox{0.7}{\begin{tikzpicture}\chemfig{[:90]F--[::-60]O-[::60](-[::-60](-[::0]F)(-[::90]F)(-[::-90]F))(-[::60](-[::0]F)(-[::90]F)(-[::-90]F))}\end{tikzpicture}}\label{fig:iso2}}
+\sidesubfloat[]{\includegraphics[width=0.2\textwidth]{pics/SEVO_struct.png}}
+  \caption{Structure of (a) isoflurane and (b) sevoflurane.}
+  \label{fig:iso}
+\end{figure}
+
+
+\subsubsection{Rate constants}
+
+\begin{figure}%[h]
+\centering
+\sidesubfloat[]{\includegraphics[width=0.9\linewidth]{pics/rate_constants_isoflurane.eps}}
+
+\sidesubfloat[]{\includegraphics[width=0.9\linewidth]{pics/rate_constants_sevoflurane.eps}}
+\caption{Collisional rate coefficients of (a) isoflurane and (b) sevoflurane with different reagent ions as a function of the interaction energy as predicted by the Su model \cite{su1994parametrization}}
+    \label{fig:rate_iso_sevo}
+\end{figure}
+
+
+
+\section{Concerns at the moment}
+There are some concerns regarding isoflurane:
+\begin{itemize}
+    \item It is very sensitive to humidity. In the past, people thought that the discrepancies in the PTRMS results from isoflurane measurements were due to the difference geometries of the instruments from different manufacturers, which raised doubts about the standardisation of PTRMS.
+    \item There is an ion reported at m/z 163 by \cite{smith2003analysis}. The energy required for its fragmentation it is too high, around 1.8 eV.
+    \item Furthermore, the ion assigned to m/z 147 does not have proper isotopic distribution (note that the scale is logarithmic and m/z 149 is not 1/3 of m/z  147)
+\end{itemize}
+
+
+
+
+\section{Results and discussion}
+
+\subsection{PTR-MS}
+\subsubsection{Isoflurane reaction with H\textsubscript{3}O\textsuperscript{+}}
+\begin{figure}%[h]
+\centering
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/RIdry100C-1.png}
+\includegraphics[width=0.45\linewidth]{pics/RIhumid100C-1.png}
+}
+
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/cpsISOFdry100C.png}
+\includegraphics[width=0.45\linewidth]{pics/cpsISOFhumid100C.png}
+}
+
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/ISOFdry100C-1.png}
+\includegraphics[width=0.45\linewidth]{pics/ISOFhumid100C-1.png}
+}
+
+\caption{Reagent ions intensity (a) and ISOF product ions intensity (b) and distribution plots (c) in dry (left) and humid (right) conditions, H$_3$O$^+$.}
+\label{fig:isof_h3o}
+\end{figure}
+
+\subsubsection{Isoflurane reaction with O\textsubscript{2}\textsuperscript{+}}
+\begin{figure}%[h]
+\centering
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/RIdryISOFo2.png}
+\includegraphics[width=0.45\linewidth]{pics/RIhumidISOFo2.png}
+}
+
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/ISOFo2DRY.png}
+\includegraphics[width=0.45\linewidth]{pics/ISOFo2HUMID.png}
+}
+
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/ISOFo2DRY-BR.png}
+\includegraphics[width=0.45\linewidth]{pics/ISOFo2HUMID-BR.png}
+}
+\caption{Reagent ions intensity (a) and ISOF product ions intensity (b) and distribution plots (c) in dry (left) and humid (right) conditions, O$_2^+$.}
+\label{fig:isof_o2}
+\end{figure}
+
+
+\subsubsection{Sevoflurane reaction with H\textsubscript{3}O\textsuperscript{+}}
+
+\begin{figure}%[h]
+\centering
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/RI_sevo.png}
+\includegraphics[width=0.45\linewidth]{pics/RI_sevo_humid.png}
+}
+
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/sevofluraneCPS.png}
+\includegraphics[width=0.45\linewidth]{pics/sevofluraneCPS_humid.png}
+}
+
+\sidesubfloat[]{
+\includegraphics[width=0.45\linewidth]{pics/sevofluraneBR.png}
+\includegraphics[width=0.45\linewidth]{pics/sevofluraneBR_humid.png}
+}
+
+\caption{Reagent ions intensity (a) and SEVO product ions intensity (b) and distribution plots (c) in dry (left) and humid (right) conditions, H$_3$O$^+$.}
+\label{fig:sevo_h3o}
+\end{figure}
+
+
+
+\section{Conclusions and further remarks}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

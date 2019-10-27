@@ -1,60 +1,59 @@
-\documentclass[12pt,a4paper]{DOLthesis}  
+\PassOptionsToPackage{dvipdfmx}{graphicx} %dvipdfmx or dvipdfm depending on the tex system
+\documentclass[11pt,a4paper]{DOLthesis}  % [,demo,draft] %1min faster
 %\documentclass[12pt,a4paper,twoside]{DOLthesis}  %twoside document
 %load any additional packages
 \usepackage[british]{babel}
+\usepackage[utf8]{inputenc}    
+\usepackage[T1]{fontenc} 
 % To ammend errors and warnings
 \RequirePackage{etex}
 \usepackage{csquotes}
-%%
+\usepackage[colorinlistoftodos]{todonotes}
 \usepackage{enumitem}
 \usepackage{tikz}
 \usepackage{lscape}
 \usepackage{longtable}
-\usepackage{multirow,bigdelim,dcolumn,booktabs}
+\usepackage{multirow,bigdelim,dcolumn}
 \usepackage{graphicx}
+
+% these two give problems with HTML
 \usepackage{floatrow}
 \usepackage{subfig}
-\usepackage{pgfplots}
-\pgfplotsset{width=0.8\linewidth,compat=1.9}
-\usepackage{chemfig} 			%for chemical structures
-\setatomsep{2.5em}                %bond length. 3em is the standard
 
-\usepackage{tkz-fct}
-\usetikzlibrary{external}		%to speed up figures
-%\tikzexternalize[prefix=tikz/]%,shell escape=-enable-write1 --shell-escape,prefix=tikz/, mode=graphics if exists, export=false, optimize=false
-% \tikzset{
-% 	png export/.style={
-% 		external/system call/.add=
-% 		{}
-% 		{; convert -density 300 -transparent white "\image.pdf" -quality 100 "\image.png";},
-% 		%
-% 		/pgf/images/external info,
-% 		/pgf/images/include external/.code={%
-% 			\includegraphics
-% 			[width=\pgfexternalwidth,height=\pgfexternalheight]
-% 			{##1.png}%
-% 		}
-% 	}
-% }
+% COMENTED ON 27/7/19
+%\usepackage{pgfplots}
+%\pgfplotsset{width=0.8\linewidth,compat=1.9}
+%\usepackage{chemfig} 			%for chemical structures
+%%\setatomsep{2.5em}                %bond length. 3em is the standard
+%\usepackage{tkz-fct}
+%\usetikzlibrary{external}		%to speed up figures
 
-\usepackage[style=nature,%chem-acs,%phys,nature
-sorting=none,sortcites=true, giveninits=true,hyperref, doi=false,eprint=false,url=false,isbn=false]{biblatex}	
+%maybe set maxnames=3 or remove the feature
+\usepackage[style=nature,sorting=none,sortcites=true,defernumbers=true,giveninits=true,hyperref,doi=false,eprint=false,url=false,isbn=false,maxnames=1,maxbibnames=99]{biblatex}	%chem-acs, %phys, %nature
+
+% To add all names in fullcite
+\preto\fullcite{\AtNextCite{\defcounter{maxnames}{99}}}
+
 \addbibresource{refs_new.bib}
-\addbibresource{mendeley_refs.bib}
 \AtEveryBibitem{\clearfield{note}}
 \renewbibmacro{in:}{}
 
+
+
 \usepackage{booktabs}
-\usepackage[symbol]{footmisc}
+\usepackage[symbol,bottom]{footmisc}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\usepackage[left=2cm,top=3cm,right=2cm,bottom=3cm,bindingoffset=1cm]{geometry}
+% for single sided
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=3cm]{geometry}
+% for double sided
+%\usepackage[left=2cm,top=3cm,right=2cm,bottom=3cm,bindingoffset=1cm]{geometry}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage[page,toc,titletoc,title]{appendix}
 \usepackage[justification=centering]{caption}
 \captionsetup{font={stretch=1.5}}
 \usepackage{textcomp}
-\usepackage{pdfpages} 
+\usepackage{pdfpages} 	% to add pdf documents
 \usepackage{hyperref}
 \hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 \usepackage{datetime}
@@ -73,9 +72,8 @@ sorting=none,sortcites=true, giveninits=true,hyperref, doi=false,eprint=false,ur
 
 \usepackage[doublespacing]{setspace}        %double space
 
-\usepackage{longtable}
 \usepackage[acronym]{glossaries}
-\usepackage{glossary-mcols}
+%\usepackage{glossary-mcols}			% two column glossary
 \makenoidxglossaries
 \input{others/abbreviations.tex}
 %
@@ -86,30 +84,37 @@ sorting=none,sortcites=true, giveninits=true,hyperref, doi=false,eprint=false,ur
 \fancyhead[R]{\leftmark}
 \fancyfoot[C]{\thepage}
 
-
-
 \setlength{\headheight}{14.50pt}            % ...at least 14.49998pt by the warning
 
 %\title{MANIPULATION OF ION CHEMISTRY PROCESSES FOR IMPROVEMENTS IN SELECTIVITY IN PROTON TRANSFER REACTION MASS SPECTROMETRY} 
-\title{[my thesis title goes here]}
+\title{Proton Transfer Reaction Mass Spectrometric Investigations of Compounds of Relevance to Homeland Security and Breath Analysis}
 \author{David Olivenza-Le\'on}             %your name
 \college{School of Physics and Astronomy}  %your college
 \degree{Doctor of Philosophy}     %the degree
 \degreedate{\monthyeardate\today}         %the degree date
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %end the preamble and start the document
+
+% to fix equations not showing in html (eq)
+%\Preamble{xhtml,mathml}    %(eq)
+%\Configure{@HEAD}{\HCode{\Hnewline<script type="text/javascript"
+%   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_CHTML">
+%   </script>\Hnewline}}  %(eq)
+
 \begin{document}
 
-% this is for chemfig
-\setcrambond{3pt}{}{}		% thickness of bold lines
-\setbondoffset{3pt}			% distance bond-letter
-\newcommand{\bondwidth}{0.06642 em} % 'Line Width'
-\setbondstyle{line width = \bondwidth}
-\makeatletter
-\def\CF@cycle@inraduiscoeff{0.8}		%radius of aromatic rings (default = 0.75)
-\makeatother
+%\EndPreamble   %(eq)
 
-%subfigures
+% this is for chemfig
+%\setcrambond{3pt}{}{}		% thickness of bold lines
+%\setbondoffset{3pt}			% distance bond-letter
+%\newcommand{\bondwidth}{0.06642 em} % 'Line Width'
+%\setbondstyle{line width = \bondwidth}
+%\makeatletter
+%\def\CF@cycle@inraduiscoeff{0.8}		%radius of aromatic rings (default = 0.75)
+%\makeatother
+
+%subfigures. Comment for html, htlatex
 \floatsetup[figure]{style=plain,subcapbesideposition=top} 
 
 %this baselineskip gives sufficient line spacing for an examiner to easily
@@ -122,7 +127,6 @@ sorting=none,sortcites=true, giveninits=true,hyperref, doi=false,eprint=false,ur
 
 \renewcommand*\contentsname{Table of Contents}
 
-
 \maketitle                          % create a title page from the preamble info
 %\includepdf[pages=-]{letter for the repository.pdf}
 \doublespacing
@@ -130,8 +134,6 @@ sorting=none,sortcites=true, giveninits=true,hyperref, doi=false,eprint=false,ur
 \include{others/dedication}         % include a dedication.tex file
 \include{others/acknowlegements}    % include an acknowledgements.tex file
 
-
-		%\begin{singlespace}
 %this is to remove the page number from table of contents
 \pagestyle{empty}
 {
@@ -140,39 +142,36 @@ sorting=none,sortcites=true, giveninits=true,hyperref, doi=false,eprint=false,ur
 }
 \clearpage
 \pagestyle{plain}
-		%\end{singlespace}
 \begin{romanpages}                  % start roman page numbering
-		%\begin{singlespace}
 \listoffigures                      % generate and include a list of figures
 \listoftables                       % generate and include a list of tables
 \clearpage
-		%\end{singlespace}
-		%\begin{singlespace}
 \setlist[description]{leftmargin=!, labelwidth=6em} % Change for glossaries
-\printnoidxglossary[type=\acronymtype,title=List of Abbreviations,nonumberlist,sort=letter] %this creates the list of abreviations, from the acronym list, without numbers (nonumberlist), and alphabetically sorted (sort=letter).
-
-%\printnoidxglossary[type=\acronymtype,title=List of Abbreviations, nonumberlist, sort=letter, style=mcolindex] %this creates the list of abreviations, from the acronym list, without numbers (nonumberlist), in two columns (mcolindex), and alphabetically sorted (sort=letter).
+\printnoidxglossary[type=\acronymtype,title=List of Abbreviations, nonumberlist,sort=letter]%, style=mcolindex] %this creates the list of abbreviations, from the acronym list, without numbers (nonumberlist), in two columns (mcolindex), and alphabetically sorted (sort=letter).
 \setlist[description]{style=standard} % reset settings back to default
-		%\end{singlespace}
 \end{romanpages}                    % end roman page numbering
 %now include the files of latex for each of the chapters etc
 \pagestyle{fancy}
-\include{chapters/chapter1}
-\include{chapters/chapter2}
-\include{chapters/chapter3}
-\include{chapters/chapter4}
-\include{chapters/chapter5}
-\include{chapters/chapter6}
-\include{chapters/chapter7}
-\include{chapters/conclusions}
+\include{chapters/1intro}
+\include{chapters/2ptrms}
+\include{chapters/3cocaine}
+%\include{chapters/4drugs}
+\include{chapters/65RF}
+\include{chapters/66nitroanilines}
+%\include{chapters/67phthalates}
+\include{chapters/7ketones}
+\include{chapters/8anaesthetics}
+%%\include{chapters/91SIMION}
+%\include{chapters/conclusions}
 
 %\nocite{*}
 %next line changes bibliography name to references
+\fancyhead[L]{}% this cleans the left header. It was showing the last chapter number
+\fancyhead[R]{References}    
 \renewcommand{\bibname}{References}
-\addcontentsline{toc}{chapter}{References}
 \printbibliography
+\addcontentsline{toc}{chapter}{References}
 \newpage
-
 
 %now enable appendix numbering format and include any appendices
 \appendix
@@ -181,9 +180,13 @@ sorting=none,sortcites=true, giveninits=true,hyperref, doi=false,eprint=false,ur
 \renewcommand{\headrulewidth}{0pt} %this deletes the horizontal line
 
 \begin{appendices}
+
+%%\include{appendix/physical_properties}
+%\include{chapters/8anaesthetics}
+%\include{chapters/99otherstuff}
+%%\include{appendix/code}
 \include{appendix/papers}
-\include{appendix/physical_properties}
-%\include{appendix/code}
+
 \end{appendices}
 
 \end{document}

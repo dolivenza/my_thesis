@@ -1,0 +1,64 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Table of Contents}}{16}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-2000}{QQ2-1-2}{List of Figures}}{2}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-3000}{QQ2-1-3}{List of Tables}}{4}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-4000}{QQ2-1-4}{List of Abbreviations}}{7}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-50001}{QQ2-1-5}{Introduction}}{3}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{1}{x1-60001.1}{QQ2-1-6}{Soft Chemical Ionisation Mass Spectrometry}}{3}\relax 
+\doTocEntry\toclot{1.1}{\csname a:TocLink\endcsname{1}{x1-6001r1}{}{\ignorespaces Main soft chemical ionisation reactions.}}{table}\relax 
+\doTocEntry\tocsubsection{1.1.1}{\csname a:TocLink\endcsname{1}{x1-70001.1.1}{QQ2-1-8}{Thermodynamics of proton transfer}}{6}\relax 
+\doTocEntry\toclot{1.2}{\csname a:TocLink\endcsname{1}{x1-7004r2}{}{\ignorespaces Organic compounds usually found in air sorted by their proton affinity \cite {doi:10.1063/1.556018}.}}{table}\relax 
+\doTocEntry\tocsubsection{1.1.2}{\csname a:TocLink\endcsname{1}{x1-80001.1.2}{QQ2-1-10}{Kinetics of proton transfer}}{12}\relax 
+\doTocEntry\tocsubsection{1.1.3}{\csname a:TocLink\endcsname{1}{x1-90001.1.3}{QQ2-1-11}{Other reagent ions}}{13}\relax 
+\doTocEntry\toclot{1.3}{\csname a:TocLink\endcsname{1}{x1-9001r3}{}{\ignorespaces Predominant reactions of an analyte M with NO$^+$ and O$_2^+$.}}{table}\relax 
+\doTocEntry\tocsubsection{1.1.4}{\csname a:TocLink\endcsname{1}{x1-100001.1.4}{QQ2-1-13}{SCI-MS techniques}}{17}\relax 
+\doTocEntry\tocsubsubsection{1.1.4.1}{\csname a:TocLink\endcsname{1}{x1-110001.1.4.1}{QQ2-1-14}{Ion Mobility Spectrometry}}{17}\relax 
+\doTocEntry\toclof{1.1}{\csname a:TocLink\endcsname{1}{x1-11003r1}{}{\ignorespaces Schematic diagram of an IMS instrument. Copyright \textcopyright \citeauthor {ellis2013proton}, \citeyear {ellis2013proton}.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{1.1.4.2}{\csname a:TocLink\endcsname{1}{x1-120001.1.4.2}{QQ2-1-16}{Selected Ion Flow Tube Mass Spectrometry}}{22}\relax 
+\doTocEntry\toclof{1.2}{\csname a:TocLink\endcsname{1}{x1-12001r2}{}{\ignorespaces Schematic diagram of a SIFT-MS instrument. Copyright \textcopyright \citeauthor {ellis2013proton}, \citeyear {ellis2013proton}.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{1.1.4.3}{\csname a:TocLink\endcsname{1}{x1-130001.1.4.3}{QQ2-1-18}{Proton Transfer Reaction Mass Spectrometry}}{25}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-140001.2}{QQ2-1-19}{Thesis outline}}{26}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-150001.3}{QQ2-1-20}{Aim of the thesis}}{27}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{1}{x1-160002}{QQ2-1-21}{Proton Transfer Reaction Mass Spectrometry}}{30}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{1}{x1-170002.1}{QQ2-1-22}{The PTR-ToF-MS}}{30}\relax 
+\doTocEntry\toclof{2.1}{\csname a:TocLink\endcsname{1}{x1-17004r1}{}{\ignorespaces (a) Picture of our PTR-ToF-MS with the TDU attached. (b) Illustration of the same instrument (not to scale) including the naming convention.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.1.1}{\csname a:TocLink\endcsname{1}{x1-180002.1.1}{QQ2-1-24}{Ion source}}{33}\relax 
+\doTocEntry\toclof{2.2}{\csname a:TocLink\endcsname{1}{x1-18001r2}{}{\ignorespaces Diagram of the hollow cathode of the PTR-MS apparatus manufactured by KORE Technology Ltd.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{2.1.1.1}{\csname a:TocLink\endcsname{1}{x1-190002.1.1.1}{QQ2-1-26}{The glow discharge: production of reagent ions}}{36}\relax 
+\doTocEntry\toclot{2.1}{\csname a:TocLink\endcsname{1}{x1-19001r1}{}{\ignorespaces Chemical reactions through which hydronium can be produced starting from products of EI of water vapour and their rate coefficients at 300K \cite {doi:10.1002/rcm.1290030312}.}}{table}\relax 
+\doTocEntry\tocsubsection{2.1.2}{\csname a:TocLink\endcsname{1}{x1-200002.1.2}{QQ2-1-28}{Drift tube}}{40}\relax 
+\doTocEntry\toclof{2.3}{\csname a:TocLink\endcsname{1}{x1-20001r3}{}{\ignorespaces Picture of the drift tube.}}{figure}\relax 
+\doTocEntry\toclof{2.4}{\csname a:TocLink\endcsname{1}{x1-20002r4}{}{\ignorespaces Schematic diagram of the KORE Technology Ltd RFIF Series 1 PTR-ToF-MS drift tube, together with the glow discharge and the source drift.}}{figure}\relax 
+\doTocEntry\toclof{2.5}{\csname a:TocLink\endcsname{1}{x1-20003r5}{}{\ignorespaces (a) Half section view of the reactor. (b) Potential energy surface of the cross section of the reactor in DC mode calculated in SIMION\textsuperscript  {\special {t4ht@+&{35}xAE{59}}x} for a random drift voltage.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{2.1.2.1}{\csname a:TocLink\endcsname{1}{x1-210002.1.2.1}{QQ2-1-32}{Reduced electric field}}{49}\relax 
+\doTocEntry\toclof{2.6}{\csname a:TocLink\endcsname{1}{x1-21011r6}{}{\ignorespaces Plot of the kinetic energy of the collision in the centre-of-mass frame of reference, KE\textsubscript  {CM}, as a function of the \textit  {E/N} for collisions of H$_3$O$^+$ with cocaine (C$_{17}$H$_{21}$NO$_4$, 303 g/mol) or 2-butanone (C$_4$H$_8$O, 71 g/mol) at 300 K with N$_2$ as buffer gas. The values for K$_0$ and N$_0$ are 2.8 cm$^2$V$^{-1}$s$^{-1}$ and 2.69$\times $10$^{19}$ cm$^{-3}$, respectively.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{2.1.2.2}{\csname a:TocLink\endcsname{1}{x1-220002.1.2.2}{QQ2-1-34}{Radio frequency ion funnel}}{59}\relax 
+\doTocEntry\toclof{2.7}{\csname a:TocLink\endcsname{1}{x1-22001r7}{}{\ignorespaces Potential energy view of the cross section of the reactor in RF mode modelled in SIMION\textsuperscript  {\special {t4ht@+&{35}xAE{59}}x} with a random DC field.}}{figure}\relax 
+\doTocEntry\toclof{2.8}{\csname a:TocLink\endcsname{1}{x1-22002r8}{}{\ignorespaces Simulation of ion trajectories in (a) DC mode and (b) RF mode in the second half of the drift tube for ions of \textit  {m/z} 19 at a drift voltage of 200 V (ca. 120 Td in DC mode).}}{figure}\relax 
+\doTocEntry\tocsubsubsection{2.1.2.3}{\csname a:TocLink\endcsname{1}{x1-230002.1.2.3}{QQ2-1-37}{Fast reduced electric field switching}}{65}\relax 
+\doTocEntry\tocsubsection{2.1.3}{\csname a:TocLink\endcsname{1}{x1-240002.1.3}{QQ2-1-38}{Differential pumping region and transfer lenses}}{66}\relax 
+\doTocEntry\toclof{2.9}{\csname a:TocLink\endcsname{1}{x1-24001r9}{}{\ignorespaces Simulation of the ion trajectories in the transfer lens region using SIMION\textsuperscript  {\special {t4ht@+&{35}xAE{59}}x}.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.1.4}{\csname a:TocLink\endcsname{1}{x1-250002.1.4}{QQ2-1-40}{Mass spectrometer}}{70}\relax 
+\doTocEntry\tocsubsubsection{2.1.4.1}{\csname a:TocLink\endcsname{1}{x1-260002.1.4.1}{QQ2-1-41}{Time-of-flight mass spectrometer}}{70}\relax 
+\doTocEntry\toclof{2.10}{\csname a:TocLink\endcsname{1}{x1-26003r10}{}{\ignorespaces Diagram of a linear time-of-flight mass spectrometer.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{2.1.4.2}{\csname a:TocLink\endcsname{1}{x1-270002.1.4.2}{QQ2-1-43}{Reflectron}}{74}\relax 
+\doTocEntry\toclof{2.11}{\csname a:TocLink\endcsname{1}{x1-27001r11}{}{\ignorespaces Schematic diagram of a flight tube with a reflectron showing the different trajectories of seven ions of the same \textit  {m/z} with different initial velocities simulated in SIMION\textsuperscript  {\special {t4ht@+&{35}xAE{59}}x}.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{2.1.4.3}{\csname a:TocLink\endcsname{1}{x1-280002.1.4.3}{QQ2-1-45}{Detector}}{77}\relax 
+\doTocEntry\toclof{2.12}{\csname a:TocLink\endcsname{1}{x1-28001r12}{}{\ignorespaces Schematic diagram of a MCP detector.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{2.1.4.4}{\csname a:TocLink\endcsname{1}{x1-290002.1.4.4}{QQ2-1-47}{Calibration}}{80}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{1}{x1-300002.2}{QQ2-1-48}{Data analysis}}{81}\relax 
+\doTocEntry\tocsubsection{2.2.1}{\csname a:TocLink\endcsname{1}{x1-310002.2.1}{QQ2-1-49}{Data acquisition, visualisation and treatment}}{81}\relax 
+\doTocEntry\toclof{2.13}{\csname a:TocLink\endcsname{1}{x1-31001r13}{}{\ignorespaces Screenshot of the GRAMS/AI\textsuperscript  {TM} user interface for the PTR-ToF-MS instrument manufactured by KORE Technology Ltd showing (a) an example of mass spectrum, and (b) an example of transient experiment data.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.2.2}{\csname a:TocLink\endcsname{1}{x1-320002.2.2}{QQ2-1-51}{Calculation of ion intensities}}{85}\relax 
+\doTocEntry\tocsubsection{2.2.3}{\csname a:TocLink\endcsname{1}{x1-330002.2.3}{QQ2-1-52}{Fast switching software}}{87}\relax 
+\doTocEntry\toclof{2.14}{\csname a:TocLink\endcsname{1}{x1-33001r14}{}{\ignorespaces Screenshot of the graphical user interface for the script that analyses fast-switching data}}{figure}\relax 
+\doTocEntry\toclof{2.15}{\csname a:TocLink\endcsname{1}{x1-33002r15}{}{\ignorespaces Example plots of data analysed with the fast-switching software}}{figure}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{1}{x1-340002.3}{QQ2-1-55}{PTR-MS Add-ons}}{94}\relax 
+\doTocEntry\tocsubsection{2.3.1}{\csname a:TocLink\endcsname{1}{x1-350002.3.1}{QQ2-1-56}{Thermal Desorption Unit}}{94}\relax 
+\doTocEntry\toclof{2.16}{\csname a:TocLink\endcsname{1}{x1-35001r16}{}{\ignorespaces (a) Picture of the TDU near to (top) used and (bottom) new PTFE swabs. (b) Schematic diagram of the TDU \cite {RN445}.}}{figure}\relax 
+\doTocEntry\toclof{2.17}{\csname a:TocLink\endcsname{1}{x1-35002r17}{}{\ignorespaces Time profiles of the count rates of two characteristic product ions at \textit  {m/z} 310 and \textit  {m/z} 370 during the thermal desorption of trace amounts of heroin at 120 Td using the TDU in PTR-MS.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.3.2}{\csname a:TocLink\endcsname{1}{x1-360002.3.2}{QQ2-1-59}{FastGC}}{101}\relax 
+\doTocEntry\tocsubsection{2.3.3}{\csname a:TocLink\endcsname{1}{x1-370002.3.3}{QQ2-1-60}{Liquid Calibration Unit}}{102}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-61}{}{References}}{103}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-380002.3.3}{QQ2-1-62}{References}}{104}\relax 
+\par 

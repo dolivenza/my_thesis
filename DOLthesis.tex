@@ -15,6 +15,10 @@
 \usepackage{longtable}
 \usepackage{multirow,bigdelim,dcolumn}
 \usepackage{graphicx}
+\usepackage{afterpage}  % load the afterpage package for longtables to start in new page
+
+% to look for the char +301 error
+%\DeclareUnicodeCharacter{0301}{*************************************}
 
 % these two give problems with HTML
 \usepackage{floatrow}
@@ -155,14 +159,12 @@
 \include{chapters/1intro}
 \include{chapters/2ptrms}
 \include{chapters/3cocaine}
-%\include{chapters/4drugs}
 \include{chapters/65RF}
 \include{chapters/66nitroanilines}
 \include{chapters/7ketones}
 \include{chapters/67phthalates}
-\include{chapters/8anaesthetics}
 %%\include{chapters/91SIMION}
-%\include{chapters/conclusions}
+\include{chapters/conclusions}
 
 %\nocite{*}
 %next line changes bibliography name to references
@@ -182,9 +184,10 @@
 \begin{appendices}
 
 %%\include{appendix/physical_properties}
-%\include{chapters/8anaesthetics}
+\include{chapters/8anaesthetics}
 %\include{chapters/99otherstuff}
 %%\include{appendix/code}
+\include{chapters/4drugs}
 \include{appendix/papers}
 
 \end{appendices}

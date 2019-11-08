@@ -1,8 +1,6 @@
 \chapter{Investigation of Phthalate Esters in Proton Transfer Reaction Mass Spectrometry via Direct Headspace Sampling}
 \markboth{Investigation of phthalates in PTR-MS}{}
 
-\textbf{BUSCAR LO QUE TENGO DEL ARTICULO DE ESTO ESCRITO}
-
 %This chapter is a reformatted copy of my published article:
 
 %\fullcite{phthalates}.
@@ -20,141 +18,206 @@ In this chapter, a PTR-MS study of the ........ phthalate esters is presented.
 
 \section{Introduction}
 
+Phthalates are chemicals that are  used as plasticisers in products of everyday use, mainly in  PVC that include food packaging, toys, pharmaceuticals and personal care products.  Plasticised products have become ubiquitous in  homes, schools and workplaces.
+However, there are extensive studies of the harmful effects of phthalates in the human body \cite{heudorf2007phthalates}. They are some of the most abundant  endocrine disrupting chemicals (EDCs) in air \cite{rudel2003phthalates}. Phthalates have been associated with development  and male reproductive \cite{foster2000effects,benson2009hazard,matsumoto2008potential} toxicity. However, other studies suggest that they are not harmful to the female reproductive system \cite{kay2013reproductive}.
+In children, the presence of phthalate metabolites in urine has been linked to attention deficit and hyperactivity disorder \cite{kim2009phthalates} as well as  asthma \cite{bornehag2010phthalate}. These toxic effects are not only applicable to humans. Phthalates from household waste, mainly DEHP, can contaminate the environment as well \cite{bauer1997estimation}.
+
+
+
+
+Europeans source of exposure to phthalates \cite{wormuth2006sources}.
+
+Experiments of  DEHP exposure  in mice suggest that it cannot be ruled out as a human carcinogen \cite{rusyn2012mechanistic}.
+
+
+Some of the main channels of phthalate exposure are through food contamination in adults and through toys mouthing in children. Phthalates migration from food packaging to food (solid phase extraction and UHPLC-MS/MS)  \cite{fan2012determination} and from toys \cite{earls2003gas}.
+
+For this reason, the use of phthalates is often controlled. For instance, the EU has restricted the use of phthalates as plasticisers in toys for kids, banning toys and childcare articles carrying more than  0.1\% mass of dibutyl phthalate (DBP), benzyl butyl phthalate (BBP) and bis(2-ethylhexyl) phthalate (DEHP) \cite{Parliament2005}. US and China  implemented similar regulations in 2008 \cite{USban} and 2016 \cite{chinaGB6675}, respectively. 
+
+
+It is for this that it is important to detect and quantify the presence of phthalates...
+
+Phthalates have been studied in several ways....
+
+There are some studies that show the detection of phthalate esters with different analytical systems.
+
+
+Study of phthalates inside car \cite{geiss2009investigation}.
+
+Phthalates traces have been found in human blood and faeces \cite{de2014review} and even in breastfeeding human milk \cite{zhu2006phthalate}.
+
+Phthalates are not only present in toys and tools but also in construction materials. Vinyl flooring can be a source of exposure to phthalates \cite{gong2018letter}.
+
+Quantification of phthalates in environmental matrices (air, ground, etc) at ultra-trace levels \cite{net2015reliable}
+
+23 phthalic acids in food \cite{xu2014determination}.
+
+Phthalates in GC-PICI-SRM-MS have been detected at sub nanogram levels \cite{GC-PICI-phthalates}.
+
+Phthalates in IMS \cite{michalczuk2019isomer}.
+
+Phthalates in low-energy EI \cite{lacko2018dissociation}.
+
+There are no extensive studies of phthalates in PTR-MS. 
+
+Although other people suggest that more studies of the effect of phthalates to human health are needed \cite{hauser2005phthalates}.
+
+ 
+ 
+Presence of phthalates monoesters in urine was associated to use of personal care products \cite{duty2005personal}.
+
+They have been detected. Whether they are harmful or not  is still a matter of discussion, although the authorities have been implementing restrictions and bans.
+
+Here we present a study of the reactions of some phthalate esters with H$_3$O$^+$ in the reaction region of a PTR-MS instrument as a function of the drift voltage and the reduced electric field.
+
 
 
 
 \section{Methodology}
 
 \subsection{Chemicals}
-Phthalate esters are .........clourless liquids.... with odour....
-Phthalic acid is a .......white powder.......
+Phthalates are colourless to pale-yellow, oily liquids. Phthalic acid is a white powder.
+The samples acquired for this study  are
+phthalic acid (PAcid\footnote{Phthalic acid is called PAcid instead of PA to avoid confusion with the abbreviation for proton affinity.}, Sigma Aldrich, 99.5\%),                              %done
+dimethyl phthalate (DMP, Acros Organics, 99\%),                     %done
+diethyl phthalate (DEP, Sigma Aldrich, 99.5\%),                     %done
+diallyl phthalate (DAP, Sigma Aldrich, 97\%),                       %done
+dipropyl phthalate (DPP, Sigma Aldrich, 98\%),                      %done
+dibutyl phthalate (DBP, Sigma Aldrich, 99\%),                       %done
+monoethylhexyl phthalate (MEHP, Sigma Aldrich, 97\%),               %done
+diisobutyl phthalate (DiBP, Sigma Aldrich, 99\%),                   %done
+benzyl butyl phthalate (BBP, Sigma Aldrich, 98\%),                  %done
+dibenzyl phthalate (DBeP, Alfa Aesar, 97\%)                         %done
+and
+diethylhexyl phthalate (DEHP, Sigma Aldrich, 96\%).                 %done
+They were used without further purification.
+%
+The structure of these substances is provided in \autoref{tab:PH_structs}
+%
+The vapour pressure data at 25$^\circ$C was taken from the \citeauthor{USAEPA} database \cite{USAEPA}. The vapour pressure values for DAP, MEHP, DiBP and DBeP are predicted while the ones for the rest of compounds are experimentally measured.
 
-
-The chemicals used in this study were acquired from:
-
-
-Structures are given at \autoref{tab:PH_structs}. The VP data was taken from the \citeauthor{USAEPA}
-
-
-
+{\small
 
 \begin{table}
 \centering
-\caption{Vapour pressure at 25$^\circ$C and structure of phthalic acid, ..........}
+\caption{Vapour pressure at 25$^\circ$C and structure of phthalic acid, dimethyl phthalate, diethyl phthalate, diallyl phthalate, dipropyl phthalate, dibutyl phthalate, monoethylhexyl phthalate, diisobutyl phthalate, benzyl butyl phthalate, dibenzyl phthalate and diethylhexyl phthalate.}
 \begin{tabular}{lcc}
 \textbf{Compound} &  \textbf{VP (mbar)} &  \textbf{Structure} \\ 
 \toprule
-PAcid &   8.4793e-7 &  \begin{minipage}[c]{0.35\linewidth}\centering
+PAcid &   8.48$\times$10$^{-7}$ &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/PAcid_struct2.png}\end{minipage}\\ \midrule
-DMP &    0.00410633 &  \begin{minipage}[c]{0.35\linewidth}\centering
+DMP &    4.11$\times$10$^{-3}$ &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/DMP_struct2.png}\end{minipage}\\ \midrule
-DEP &   0.00279977 &  \begin{minipage}[c]{0.35\linewidth}\centering
+DEP &   2.80$\times$10$^{-3}$ &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/DEP_struct2.png}\end{minipage}\\ \midrule
-DAP &   0.000267978 (predicted) &  \begin{minipage}[c]{0.35\linewidth}\centering
+DAP &   2.68$\times$10$^{-4}$  &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/DAP_struct2.png}\end{minipage}\\ \midrule
-DPP &   0.0001759856 &  \begin{minipage}[c]{0.35\linewidth}\centering
+DPP &   1.76$\times$10$^{-4}$ &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/DPP_struct2.png}\end{minipage}\\ \midrule
-DBP &   2.67978e-5 &  \begin{minipage}[c]{0.35\linewidth}\centering
+DBP &   2.68$\times$10$^{-5}$ &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/DBP_struct2.png}\end{minipage}\\ \midrule
-MEHP &  1.07724e-6 (predicted)  &  \begin{minipage}[c]{0.35\linewidth}\centering
+MEHP &  1.08$\times$10$^{-6}$  &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/MEHP_struct3.png}\end{minipage}\\ \midrule
-DiBP &  0.0005412889 (predicted)   &  \begin{minipage}[c]{0.35\linewidth}\centering
+DiBP &  5.41$\times$10$^{-4}$   &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/DiBP_struct2.png}\end{minipage}\\ \midrule
-BBP &   1.09991e-5  &  \begin{minipage}[c]{0.35\linewidth}\centering
+BBP &   1.10$\times$10$^{-5}$  &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/BBP_struct2.png}\end{minipage}\\ \midrule
-DBeP &  1.58653641e-6 (predicted)   &  \begin{minipage}[c]{0.35\linewidth}\centering
+DBeP &  1.59$\times$10$^{-6}$   &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/DBeP_struct2.png}\end{minipage}\\ \midrule
-DEHP &  1.89318e-7   &  \begin{minipage}[c]{0.35\linewidth}\centering
+DEHP &  1.89$\times$10$^{-7}$   &  \begin{minipage}[c]{0.35\linewidth}\centering
 \includegraphics[height=0.07\textheight]{pics/PH/DEHP_struct2.png}\end{minipage}\\ 
 \bottomrule
 \end{tabular}
 \label{tab:PH_structs}
 \end{table}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}%small font closing
 
 
 
 \subsection{Experimental details}
 
-\textit{E/N}....drift voltage...
-pressure....
-
-Sampling method was headspace analysis.
-
-
-
-
-
-
-
-
-
+The analytical tool used for this study was the KORE Technology Ltd PTR-ToF-MS instrument described in \autoref{chapter:ptr}.
+%
+The hollow cathode was set at a pressure of 1.15 mbar while the drift tube pressure was at 1.10 mbar.
+%
+This was found to give the driest conditions in the reactor.
+%
+As \autoref{fig:PH_RI} reveals, the branching  percentage of H$_3$O$^+$ is   97\% or more for any reduced electric field while the contribution of  (H$_2$O)H$_3$O$^+$ to the total reagent ion signal is 3\% or less.
+%
+The inlet line and the oven were maintained both at 100\textsuperscript{$\circ$}C.
+%
+The experimental data for each phthalate was obtained by averaging two 10-second measurements for each \textit{E/N}, which was manipulated keeping constant both  the drift tube pressure and  temperature and only changing the drift voltage  from approximately 160 V to 410 V to give a reduced electric field range of roughly 80 to 205 Td.
 
 
 
+        \begin{figure}[htbp]
+        \centering
+        \includegraphics[height=0.4\textheight]{pics/PH/RI-BR.png}
+        \caption{Reagent ion intensity plot as a function of the drift voltage and the \textit{E/N}.}
+        \label{fig:PH_RI}
+        \end{figure}
 
 
 
+%Sampling method was headspace analysis.
+%________________________________________________________ARTICLE__________________________
+
+The phthalates were analysed via headspace sampling. 
+%
+40 mL amber vials containing 1-5 mL of  phthalate samples were connected to the inlet pipe of the PTR-ToF-MS to sample the headspace of said vial using oxygen-free nitrogen (99.998\% purity, BOC Gases, Manchester, UK) as carrier gas.
+%
+The vial was heated for the substances with the lowest vapour pressure  %(using some heating wire and a bench power supply, Range for the heating of the vial: 1 A in heating wire is equal to 100\textsuperscript{$\circ$}C. Obviously, 0.5 A is 50\textsuperscript{$\circ$}C.) 
+to reach an ion intensity of at least 1000%-3000 
+ cps in the main product ions  at an \textit{E/N} of 120 Td.
+%
+
+
+
+The data acquisition was started only after approximately 30 minutes of preparing the experimental set up to avoid contamination.
+%
+Even though the purity of the samples was of at least 95\%, some volatile impurities were observed when the vials were first connected to the inlet line.
+%
+The product ions arising from these substances were found to steadily decrease and disappear in approximately 10-15 minutes while the phthalate product ions showed a stable behaviour throughout.
+%
+Furthermore, the presence of impurities with similar volatility than the phthalates cannot be discarded either. 
+%
+For this reason, only the  ions that are identified as phthalate products and that represent more than 3\% of the total product ion signal are included here.
+%
+Due to the lack of comparable studies in the literature, the mzCloud mass spectral database was proved very useful to aid in the ion identification process \cite{mzcloudd}.
+%
+ This database contains results from electrospray ionisation measurements, which at low energies is comparable with the product ion distribution obtained in PTR-MS, and the mass analyser is usually an orbitrap, which allows to acquire MS$^n$ data  to study the fragmentation of the parent molecule or selected fragments with a very high mass resolution.% reducing the false positives and with a very high mass resolution (i.e ).
+
+
+%N$_2$ flow of 0.3 L/min or 300 sccm into vial. 
 
 
 
 
 
 \section{Results and discussion}
+\autoref{table:PID} shows a summary of the observed product ions and their associated percentage product ion distributions at \textit{E/N} values of 100, 140 and 180 Td resulting from the reactions of H$_3$O$^+$ with each of the studied phthalate esters. 
+%
+The reaction of the phthalate esters with (H$_2$O)$_n$H$_3$O$^+$ for n>0 is negligible because of the low abundance of these reagent ions (see \autoref{fig:PH_RI}) and hence only reactions with H$_3$O$^+$ are considered here (except for phthalic acid).
+%
+Furthermore, only the proton affinity of DMP (940 kJ mol$^{-1}$) %(936 - 942 kJ mol$^{-1}$)
+is known  \cite{michalczuk2019isomer}. 
+%
+\citeauthor{doi:10.1063/1.556018}  only reported the proton affinity for two DMP isomers: dimethyl isophthalate (843.5 kJ mol$^{-1}$) and dimethyl terephthalate (843.2 kJ mol$^{-1}$) \cite{doi:10.1063/1.556018}.
+%
+The PA is hence unknown for the rest of the studied substances although they will  be higher than that of water because they undergo proton transfer with H$_3$O$^+$, and, by comparing with the value for DMP from \citeauthor{michalczuk2019isomer}, it is likely that they will be also higher than that of the water dimer.
+ 
 
 
 
 
-\autoref{table:PID} summarises the PID for the reaction of (H$_2$O)$_n$H$_3$O$^+$ with several phthalates of interest.
-
-
-
-
-
-
-DFT results (proton affinity.............) buscar y discutir..........
-IE for DMP is available at NIST
-
-
-
-
-
-
-
+\afterpage{% for longtable to start in new page
 % font needs to be smaller
 {\small
 
 \begin{longtable}[c]{lllccc}
 \caption{Product ions identified and their associated percentage product ion distributions measured at reduced electric fields of 100, 140, and 180 Td resulting
-from the reactions of H\textsubscript{3}O\textsuperscript{+} with several phthalate esters in order of increasing monoisotopic mass.} 
+from the reactions of H$_3$O$^+$ with several phthalate esters in order of increasing monoisotopic mass.} 
 \label{table:PID}\\
 \hline 
 \textbf{Phthalate}& \textbf{Product ion \textit{m/z}} & \textbf{Product ion}  & \multicolumn{3}{c}{\textbf{PID (\%)}} \\ \cline{4-6} 
@@ -173,170 +236,356 @@ from the reactions of H\textsubscript{3}O\textsuperscript{+} with several phthal
 \endfoot
 %
 \endlastfoot
-PAcid   & 149.02  & C\textsubscript{8}H\textsubscript{5}O\textsubscript{3}\textsuperscript{+}  & 98  & 100  & 100   \\
-C\textsubscript{8}H\textsubscript{6}O\textsubscript{4}  & 167.03  & (C\textsubscript{8}H\textsubscript{6}O\textsubscript{4})H\textsuperscript{+}  & 2  & 0  & 0  \\
+PAcid   & 149.02  & C$_8$H$_5$O$_3^+$  & 98  & 100  & 100   \\
+C$_8$H$_6$O$_4$  & 167.03  & (C$_8$H$_6$O$_4$)H$^+$  & 2  & 0  & 0  \\
 166.03  & & & & &  \\
 \hline
-DMP       &    163.04    &  C\textsubscript{9}H\textsubscript{7}O\textsubscript{3}\textsuperscript{+}   & 77 & 93 & 99   \\
-C\textsubscript{10}H\textsubscript{10}O\textsubscript{4}          &    195.07            & (C\textsubscript{10}H\textsubscript{10}O\textsubscript{4)}H\textsuperscript{+} & 23& 7& 1\\
+DMP       &    163.04    &  C$_9$H$_7$O$_3^+$   & 77 & 93 & 99   \\
+C$_{10}$H$_{10}$O$_4$          &    195.07            & (C$_{10}$H$_{10}$O$_4$)H$^+$ & 23& 7& 1\\
 194.06          & &  & & & \\
 \hline
-DEP       & 75.04                & C\textsubscript{3}H\textsubscript{7}O\textsubscript{2}\textsuperscript{+}      & 7            & 1            & 0            \\
-C\textsubscript{12}H\textsubscript{14}O\textsubscript{4}          & 149.02               & C\textsubscript{8}H\textsubscript{5}O\textsubscript{3}\textsuperscript{+}      & 1            & 7            & 76           \\
-222.09          & 177.05               & C\textsubscript{10}H\textsubscript{9}O\textsubscript{3}\textsuperscript{+}     & 36           & 57           & 21           \\
-          & 223.10                & (C\textsubscript{12}H\textsubscript{14}O\textsubscript{4)}H\textsuperscript{+} & 56           & 35           & 3            \\
+DEP       & 75.04                & C$_3$H$_7$O$_2^+$      & 7            & 1            & 0            \\
+C$_{12}$H$_{14}$O$_4$          & 149.02               & C$_8$H$_5$O$_3^+$      & 1            & 7            & 76           \\
+222.09          & 177.05               & C$_{10}$H$_9$O$_3^+$     & 36           & 57           & 21           \\
+          & 223.10                & (C$_{12}$H$_{14}$O$_4$)H$^+$ & 56           & 35           & 3            \\
 \hline
-DAP                                                      & 39.02  & C\textsubscript{3}H\textsubscript{3}\textsuperscript{+}                        & 0  & 0  & 15 \\
-C\textsubscript{14}H\textsubscript{14}O\textsubscript{4} & 41.04  & C\textsubscript{3}H\textsubscript{5}\textsuperscript{+}                        & 2  & 3  & 24 \\
-246.09                                                   & 81.07  & C\textsubscript{6}H\textsubscript{9}\textsuperscript{+}                        & 4  & 10 & 19 \\
-                                                         & 189.06 & C\textsubscript{11}H\textsubscript{9}O\textsubscript{3}\textsuperscript{+}     & 10 & 27 & 29 \\
-                                                         & 247.1  & (C\textsubscript{14}H\textsubscript{14}O\textsubscript{4)}H\textsuperscript{+} & 84 & 60 & 13\\
+DAP                                                      & 39.02  & C$_3$H$_3^+$                        & 0  & 0  & 15 \\
+C$_{14}$H$_{14}$O$_4$ & 41.04  & C$_3$H$_5^+$                        & 2  & 3  & 24 \\
+246.09                                                   & 81.07  & C$_6$H$_9^+$                        & 4  & 10 & 19 \\
+                                                         & 189.06 & C$_{11}$H$_9$O$_3^+$     & 10 & 27 & 29 \\
+                                                         & 247.1  & (C$_{14}$H$_{14}$O$_4$)H$^+$ & 84 & 60 & 13\\
 \hline
-DPP       & 79.05                & C\textsubscript{6}H\textsubscript{7}\textsuperscript{+}                           & 1            & 1            & 5            \\
-C\textsubscript{14}H\textsubscript{18}O\textsubscript{4}          & 105.03               & C\textsubscript{7}H\textsubscript{5}O\textsuperscript{+}                          & 4            & 5            & 5            \\
-250.12          & 123.04               & C\textsubscript{7}H\textsubscript{7}O\textsubscript{2}\textsuperscript{+}      & 3            & 19           & 25           \\
-          & 149.02               & C\textsubscript{8}H\textsubscript{5}O\textsubscript{3}\textsuperscript{+}      & 3            & 21           & 54           \\
-          & 165.09               & C\textsubscript{10}H\textsubscript{13}O\textsubscript{2}\textsuperscript{+}    & 31           & 15           & 2            \\
-          & 191.03               & C\textsubscript{11}H\textsubscript{11}O\textsubscript{3}\textsuperscript{+}    & 15           & 6            & 2            \\
-          & 251.13               & (C\textsubscript{14}H\textsubscript{18}O\textsubscript{4)}H\textsuperscript{+} & 43           & 33           & 7            \\
+DPP       & 79.05                & C$_6$H$_7^+$                           & 1            & 1            & 5            \\
+C$_{14}$H$_{18}$O$_4$          & 105.03               & C$_7$H$_5$O$^+$                          & 4            & 5            & 5            \\
+250.12          & 123.04               & C$_7$H$_7$O$_2^+$      & 3            & 19           & 25           \\
+          & 149.02               & C$_8$H$_5$O$_3^+$      & 3            & 21           & 54           \\
+          & 165.09               & C$_{10}$H$_{13}$O$_2^+$    & 31           & 15           & 2            \\
+          & 191.03               & C$_{11}$H$_{11}$O$_3^+$    & 15           & 6            & 2            \\
+          & 251.13               & (C$_{14}$H$_{18}$O$_4$)H$^+$ & 43           & 33           & 7            \\
 \hline
-DBP                                                      & 79.05  & C\textsubscript{6}H\textsubscript{7}\textsuperscript{+}                        & 0  & 0  & 3  \\
-C\textsubscript{16}H\textsubscript{22}O\textsubscript{4} & 105.03 & C\textsubscript{7}H\textsubscript{5}O\textsuperscript{+}                       & 4  & 5  & 5  \\
-278.15                                                   & 123.04 & C\textsubscript{7}H\textsubscript{7}O\textsubscript{2}\textsuperscript{+}      & 8  & 15 & 13 \\
-                                                         & 149.02 & C\textsubscript{8}H\textsubscript{5}O\textsubscript{3}\textsuperscript{+}      & 15 & 41 & 68 \\
-                                                         & 179.1  & C\textsubscript{11}H\textsubscript{15}O\textsubscript{2}\textsuperscript{+}    & 14 & 5  & 1  \\
-                                                         & 205.09 & C\textsubscript{12}H\textsubscript{13}O\textsubscript{3}\textsuperscript{+}    & 19 & 4  & 2  \\
-                                                         & 279.16 & (C\textsubscript{16}H\textsubscript{22}O\textsubscript{4)}H\textsuperscript{+} & 40 & 30 & 8 \\
+DBP                                                      & 79.05  & C$_6$H$_7^+$                        & 0  & 0  & 3  \\
+C$_{16}$H$_{22}$O$_4$ & 105.03 & C$_7$H$_5$O$^+$                       & 4  & 5  & 5  \\
+278.15                                                   & 123.04 & C$_7$H$_7$O$_2^+$      & 8  & 15 & 13 \\
+                                                         & 149.02 & C$_8$H$_5$O$_3^+$      & 15 & 41 & 68 \\
+                                                         & 179.1  & C$_{11}$H$_{15}$O$_2^+$    & 14 & 5  & 1  \\
+                                                         & 205.09 & C$_{12}$H$_{13}$O$_3^+$    & 19 & 4  & 2  \\
+                                                         & 279.16 & (C$_{16}$H$_{22}$O$_4$)H$^+$ & 40 & 30 & 8 \\
 \hline
-MEHP                                                     & 39.02  & C\textsubscript{3}H\textsubscript{3}\textsuperscript{+}                   & 0  & 1  & 15 \\
-C\textsubscript{16}H\textsubscript{22}O\textsubscript{4} & 41.04  & C\textsubscript{3}H\textsubscript{5}\textsuperscript{+}                   & 0  & 5  & 12 \\
-278.15                                                   & 43.05  & C\textsubscript{3}H\textsubscript{7}\textsuperscript{+}                   & 1  & 7  & 4  \\
-                                                         & 57.07  & C\textsubscript{4}H\textsubscript{9}\textsuperscript{+}                   & 17 & 18 & 6  \\
-                                                         & 69.07  & C\textsubscript{5}H\textsubscript{9}\textsuperscript{+}                   & 2  & 7  & 3  \\
-                                                         & 71.09  & C\textsubscript{5}H\textsubscript{11}\textsuperscript{+}                  & 17 & 7  & 2  \\
-                                                         & 111.12 & C\textsubscript{8}H\textsubscript{15}\textsuperscript{+}                  & 6  & 3  & 0  \\
-                                                         & 113.13 & C\textsubscript{8}H\textsubscript{17}\textsuperscript{+}                  & 6  & 1  & 0  \\
-                                                         & 129.13 & C\textsubscript{8}H\textsubscript{17}O\textsuperscript{+}                 & 10 & 5  & 2  \\
-                                                         & 149.02 & C\textsubscript{8}H\textsubscript{5}O\textsubscript{3}\textsuperscript{+} & 41 & 46 & 56 \\
+MEHP                                                     & 39.02  & C$_3$H$_3^+$                   & 0  & 1  & 15 \\
+C$_{16}$H$_{22}$O$_4$ & 41.04  & C$_3$H$_5^+$                   & 0  & 5  & 12 \\
+278.15                                                   & 43.05  & C$_3$H$_7^+$                   & 1  & 7  & 4  \\
+                                                         & 57.07  & C$_4$H$_9^+$                   & 17 & 18 & 6  \\
+                                                         & 69.07  & C$_5$H$_9^+$                   & 2  & 7  & 3  \\
+                                                         & 71.09  & C$_5$H$_{11}^+$                  & 17 & 7  & 2  \\
+                                                         & 111.12 & C$_8$H$_{15}^+$                  & 6  & 3  & 0  \\
+                                                         & 113.13 & C$_8$H$_{17}^+$                  & 6  & 1  & 0  \\
+                                                         & 129.13 & C$_8$H$_{17}$O$^+$                 & 10 & 5  & 2  \\
+                                                         & 149.02 & C$_8$H$_5$O$_3^+$ & 41 & 46 & 56 \\
 \hline
-DiBP      & 57.07                & C\textsubscript{4}H\textsubscript{9}\textsuperscript{+}                           & 2            & 3            & 5            \\
-C\textsubscript{16}H\textsubscript{22}O\textsubscript{4}          & 149.02               & C\textsubscript{8}H\textsubscript{5}O\textsubscript{3}\textsuperscript{+}      & 7            & 17           & 65           \\
-278.15          & 205.09               & C\textsubscript{12}H\textsubscript{13}O\textsubscript{3}\textsuperscript{+}    & 3            & 1            & 1            \\
-          & 279.16               & (C\textsubscript{16}H\textsubscript{22}O\textsubscript{4)}H\textsuperscript{+} & 88           & 79           & 29           \\
+DiBP      & 57.07                & C$_4$H$_9^+$                           & 2            & 3            & 5            \\
+C$_{16}$H$_{22}$O$_4$          & 149.02               & C$_8$H$_5$O$_3^+$      & 7            & 17           & 65           \\
+278.15          & 205.09               & C$_{12}$H$_{13}$O$_3^+$    & 3            & 1            & 1            \\
+          & 279.16               & (C$_{16}$H$_{22}$O$_4$)H$^+$ & 88           & 79           & 29           \\
 \hline
-BBP       & 79.05                & C\textsubscript{6}H\textsubscript{7}\textsuperscript{+}                           & 11           & 13           & 18           \\
-C\textsubscript{19}H\textsubscript{20}O\textsubscript{4}          & 91.05                & C\textsubscript{7}H\textsubscript{7}\textsuperscript{+}                           & 72           & 71           & 71           \\
-312.13          & 107.05               & C\textsubscript{7}H\textsubscript{7}O\textsuperscript{+}                          & 17           & 16           & 11           \\
+BBP       & 79.05                & C$_6$H$_7^+$                           & 11           & 13           & 18           \\
+C$_{19}$H$_{20}$O$_4$          & 91.05                & C$_7$H$_7^+$                           & 72           & 71           & 71           \\
+312.13          & 107.05               & C$_7$H$_7$O$^+$                          & 17           & 16           & 11           \\
 \hline
-DBeP      & 79.05                & C\textsubscript{6}H\textsubscript{7}\textsuperscript{+}                           & 10           & 11           & 15           \\
-C\textsubscript{22}H\textsubscript{18}O\textsubscript{4}          & 91.05                & C\textsubscript{7}H\textsubscript{7}\textsuperscript{+}                           & 75           & 76           & 75           \\
-346.12          & 107.05               & C\textsubscript{7}H\textsubscript{7}O\textsuperscript{+}                          & 15           & 13           & 10          \\
+DBeP      & 79.05                & C$_6$H$_7^+$                           & 10           & 11           & 15           \\
+C$_{22}$H$_{18}$O$_4$          & 91.05                & C$_7$H$_7^+$                           & 75           & 76           & 75           \\
+346.12          & 107.05               & C$_7$H$_7$O$^+$                          & 15           & 13           & 10          \\
 \hline
-DEHP  & 39.02  & C\textsubscript{3}H\textsubscript{3}\textsuperscript{+}                     & 1  & 1  & 12 \\
-C\textsubscript{24}H\textsubscript{38}O\textsubscript{4}  & 41.04  & C\textsubscript{3}H\textsubscript{5}\textsuperscript{+}                     & 0  & 3  & 24 \\
-390.28  & 43.05  & C\textsubscript{3}H\textsubscript{7}\textsuperscript{+}                     & 0  & 12 & 9  \\
- & 57.07  & C\textsubscript{4}H\textsubscript{9}\textsuperscript{+}                     & 15 & 26 & 16 \\
- & 69.07  & C\textsubscript{5}H\textsubscript{9}\textsuperscript{+}                     & 0  & 5  & 5  \\
- & 71.09  & C\textsubscript{5}H\textsubscript{11}\textsuperscript{+}                    & 26 & 22 & 6  \\
- & 111.12 & C\textsubscript{8}H\textsubscript{15}\textsuperscript{+}                    & 6  & 6  & 2  \\
- & 113.13 & C\textsubscript{8}H\textsubscript{17}\textsuperscript{+}                    & 25 & 5  & 3  \\
- & 123.04 & C\textsubscript{7}H\textsubscript{7}O\textsubscript{2}\textsuperscript{+}   & 9  & 10 & 10 \\
- & 129.13 & C\textsubscript{8}H\textsubscript{17}O\textsuperscript{+}                   & 10 & 5  & 3  \\
- & 149.02 & C\textsubscript{8}H\textsubscript{5}O\textsubscript{3}\textsuperscript{+}   & 2  & 4  & 10 \\
- & 235.17 & C\textsubscript{15}H\textsubscript{23}O\textsubscript{2}\textsuperscript{+} & 6  & 1  & 0  \\
+DEHP  & 39.02  & C$_3$H$_3^+$                     & 1  & 1  & 12 \\
+C$_{24}$H$_{38}$O$_4$  & 41.04  & C$_3$H$_5^+$                     & 0  & 3  & 24 \\
+390.28  & 43.05  & C$_3$H$_7^+$                     & 0  & 12 & 9  \\
+ & 57.07  & C$_4$H$_9^+$                     & 15 & 26 & 16 \\
+ & 69.07  & C$_5$H$_9^+$                     & 0  & 5  & 5  \\
+ & 71.09  & C$_5$H$_{11}^+$                    & 26 & 22 & 6  \\
+ & 111.12 & C$_8$H$_{15}^+$                    & 6  & 6  & 2  \\
+ & 113.13 & C$_8$H$_{17}^+$                    & 25 & 5  & 3  \\
+ & 123.04 & C$_7$H$_7$O$_2^+$   & 9  & 10 & 10 \\
+ & 129.13 & C$_8$H$_{17}$O$^+$                   & 10 & 5  & 3  \\
+ & 149.02 & C$_8$H$_5$O$_3^+$   & 2  & 4  & 10 \\
+ & 235.17 & C$_{15}$H$_{23}$O$_2^+$ & 6  & 1  & 0  \\
 \hline
 \end{longtable}  
 
 } %closing small font size change
+}% end of scope of afterpage directive 
 
 
 
-\begin{figure}
+
+
+
+
+
+\subsection{Phthalic acid}
+
+\autoref{fig:PH_PAcid} shows the PID plot for the reaction of phthalic acid with the reagent ions as a function of the drift voltage and the reduced electric field. 
+%
+Only two product ions were observed: the protonated parent molecule  ((C$_8$H$_6$O$_4$)H$^+$)  at \textit{m/z} 167 and  protonated phthalic anhydride (C$_8$H$_{5}$O$_3^+$) at \textit{m/z} 149.
+
+The fact that these product ions resemble the reagent ions in \autoref{fig:PH_RI} indicates that the protonated parent ion is a product of the non-dissociative reaction of phthalic acid with (H$_2$O)H$_3$O$^+$, which is only found at trace levels at low \textit{E/N}.
+%
+Proton transfer from (H$_2$O)H$_3$O$^+$ is  softer  than that from H$_3$O$^+$, with a difference in gas basicity  of 124 kJ mol$^{-1}$ or 1.285 eV.
+%
+Even though there are not DFT results available to illustrate the loss of H$_2$O from protonated phthalic acid to give protonated phthalic anhydride, it can be concluded that this process is energetically favourable because the ion at \textit{m/z} 149 is observed for all \textit{E/N} values. 
+%
+The formation of this ion needs  protonation of one of the hydroxy oxygen atoms, which is a similar pathway to that of benzoic acid to yield benzoyl$^+$ (see section \ref{section:BzAcid}). %I am not sure about this
+
+
+
+
+
+
+
+
+
+%This is in agreement with what was observed for the benzoate esters (which one?)
+
+
+
+%This is a softer proton transfer reaction than that from H$_3$O$^+$, which yields the ion at \textit{m/z} 149.02. This corresponds to protonated phthalic anhydride (C$_8$H$_{5}$O$_3^+$) and it comes from the loss of water from the protonated parent molecule (\autoref{eq:PAcid}). 
+
+%\begin{equation}
+%PAcid + H_3O^+ \rightarrow (PAcidH^+)^* + H_2O \\
+%(PAcidH^+)^*  \rightarrow [PAcid - H_2O]H^+ + H_2O
+%%PAcid + H_3O^+ \rightarrow (PAcidH^+)^* + H_2O \rightarrow [PAcid - H_2O]H^+ + 2H_2O
+%\label{eq:PAcid}
+%\end{equation}
+
+%Is this true? (by comparison with the benzoate esters):
+%The loss of water  requires the proton to be on one of the two alkoxy oxygens while hydrogen bonded to the other one to yield a barrierless disociation, as it is observed for all the \textit{E/N} range (\textit{m/z} 149.02 roughly mirrors the PID of H$_3$O$^+$ in \autoref{fig:PH_RI} while \textit{m/z} 167.03 mirrors that of (H$_2$O)H$_3$O$^+$).
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/Pacid-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of phthalic acid with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:PAcid}
+\caption{Percentage product ion distribution resulting from the reaction of phthalic acid with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_PAcid}
 \end{figure}
 
 
-\begin{figure}
+
+\subsection{Dimethyl phthalate}
+DMP is the phthalate diester with the shortest alkyl chain. It is produced from phthalic anhydride and methanol \cite{lowenheim1975industrial} and  its main non-industrial application is as insect repellent for personal protection against biting insects  \cite{o2013merck,brown1997insect}.
+
+
+Dissociative proton transfer to yield C$_9$H$_{7}$O$_3^+$ at \textit{m/z} 163.04 (i.e. loss of methanol from the protonated parent)
+is the dominant channel for the reaction of DMP with H$_3$O$^+$ (\autoref{fig:PH_DMP_fs}).
+The protonated parent ion, (C$_{10}$H$_{10}$O$_4$)H$^+$ at \textit{m/z} 195.07, only represents ca. 25\% of the total product ion signal at around 80 Td and it steadily decreases as the \textit{E/N} increases.
+%
+Interestingly, DMP is the only one of the alkyl diester phthalates studied here in which protonated phthalic anhydride is not a product ion. The formation of protonated phthalic anhydride would require the further loss of the remaining methyl group in the ion observed at \textit{m/z} 163.04.
+%
+This is comparable to the ion with \textit{m/z} 123 being observed with all the benzoates except with methyl benzoate (see section \ref{section:MeBz}). 
+
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DMP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of DMP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:DMP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of DMP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_DMP_fs}
 \end{figure}
 
 
-\begin{figure}
+
+\subsection{Diethyl phthalate}
+
+
+\autoref{fig:PH_DEP_fs} shows the PID plot for the reaction of DEP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field.
+At low \textit{E/N}, the most abundant ion at ca. 60\% is the protonated parent molecule, (C$_{12}$H$_{14}$O$_4$)H$^+$  at \textit{m/z} 223.10, which steadily decreases as the reduced electric field increases.
+Furthermore, another product ion is found at low \textit{E/N} at \textit{m/z} 75.04, and it is tentatively assigned to protonated ethyl formate (C$_3$H$_{7}$O$_2^+$).
+The ion at \textit{m/z} 177.05, assigned to C$_{10}$H$_{9}$O$_3^+$, comes from the loss of ethanol from the protonated parent molecule and it peaks at around 150 Td with ca. 65\% of the total product ion signal.
+At high \textit{E/N}, the dominant ion is protonated phthalic anhydride (C$_8$H$_{5}$O$_3^+$), going up to 95\% for \textit{E/N} higher than 200 Td.
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DEP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of DEP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:DEP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of DEP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_DEP_fs}
 \end{figure}
 
 
-\begin{figure}
+
+
+
+\subsection{Diallyl phthalate}
+DAP is a skin, eyes and mucous membranes irritant \cite{clayton1981patty}.
+Non-dissociative proton transfer ((C$_{14}$H$_{14}$O$_4$)H$^+$ at \textit{m/z} 247.10) is the dominant channel for the reaction of DAP with H$_3$O$^+$ from low reduced electric field up to around 150 Td (\autoref{fig:PH_DAP_fs}). Then the ion resulting from the loss of allyl alcohol (C$_{11}$H$_9$O$_3^+$ at \textit{m/z} 189.06) becomes dominant. At high \textit{E/N} we observe C$_3$H$_5^+$, tentively assigned to  the allyl radical,  and C$_3$H$_3^+$.
+The ion at \textit{m/z} 81.07 is C$_6$H$_9^+$.
+
+
+
+
+
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DAP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of DAP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:DAP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of DAP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_DAP_fs}
 \end{figure}
 
 
-\begin{figure}
+\subsection{Dipropyl phthalate}
+
+
+\autoref{fig:PH_DPP_fs} shows the PID for the reaction of H$_3$O$^+$ with DPP as a function of the reduced electric field for the from 80 to 205 Td.
+At low \textit{E/N}, the dominant ion is the protonated parent, (C$_{14}$H$_{18}$O$_4$)H$^+$, followed by the  loss of C$_4$H$_6$O$_2$ from the protonated parent, yielding C$_{10}$H$_{13}$O$_2^+$, tentatively assigned to protonated propyl benzoate, and the loss of propanol from the protonated parent, yielding C$_{11}$H$_{11}$O$_3^+$. The abundance of these three ions decrease with the reduced electric field and at ca. 150 Td protonated phthalic anhydride becomes dominant. At high \textit{E/N} we found protonated benzoic acid (C$_{7}$H$_{7}$O$_2^+$) and  protonated benzene (C$_6$H$_{7}^+$).
+A minor contribution is observed for the whole \textit{E/N} range from benzoyl$^+$ (C$_7$H$_{5}$O$^+$).
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DPP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of DPP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:DPP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of DPP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_DPP_fs}
 \end{figure}
 
 
-\begin{figure}
+
+\subsection{Dibutyl phthalate}
+
+
+This is one of the most controlled and restricted phthalates in the EU, USA and  China.
+The protonated parent ion (\textit{m/z} 279.16, (C$_{16}$H$_{22}$O$_4$)H$^+$) dominates from low \textit{E/N} up to around 130 Td, when protonated phthalic anhydride becomes the most abundant ion for the rest of the reduced electric field range (see \autoref{fig:PH_DBP_fs}).
+At low \textit{E/N} we also found the resulting ion from the loss of butanol from the protonated parent, C$_{12}$H$_{13}$O$_3^+$ at \textit{m/z} 205.09,  and the loss of C$_{5}$H$_{8}$O$_2$ to yield C$_{11}$H$_{15}$O$_2^+$ at \textit{m/z} 179.10, which is tentatively assigned to protonated butyl benzoate.
+At high \textit{E/N} some minor ions are protonated benzoic acid (C$_{7}$H$_{7}$O$_2^+$), benzoyl$^+$ (C$_7$H$_{5}$O$^+$) and protonated benzene (C$_6$H$_{7}^+$) at \textit{m/z} 123.04, \textit{m/z} 105.03 and \textit{m/z} 79.05, respectively.
+
+
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DBP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of DBP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:DBP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of DBP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_DBP_fs}
 \end{figure}
 
 
-\begin{figure}
+
+
+\subsection{Monoethylhexyl phthalate}
+
+
+This phthalate is an active metabolite of DEHP formed through hydrolysis. The detection of MEHP in urine of children has been linked to exposure to DEHP \cite{becker2004dehp}.
+Protonated phthalic anhydride is the dominant ion for all the \textit{E/N} range (\autoref{fig:PH_MEHP_fs}). 
+The protonated parent (\textit{m/z} 279.16) was not observed and all the other product ions we found come from the successive fragmentation of the 2-ethylhexyl ester group:
+the ion at \textit{m/z} 129.13 is C$_8$H$_{17}$O$^+$,
+the ion at \textit{m/z} 113.13 is C$_8$H$_{17}^+$,
+the ion at \textit{m/z} 111.12 is C$_8$H$_{15}^+$,  
+the ion at \textit{m/z} 71.09 is C$_5$H$_{11}^+$,
+the ion at \textit{m/z} 69.07 is C$_5$H$_9^+$,
+the ion at \textit{m/z} 57.07 is C$_4$H$_9^+$, 
+the ion at \textit{m/z} 43.05 is CC$_3$H$_7^+$,
+the ion at \textit{m/z} 41.04 is C$_3$H$_5^+$
+and
+the ion at \textit{m/z} 39.02 is C$_3$H$_3^+$. 
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/MEHP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of MEHP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:MEHP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of MEHP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_MEHP_fs}
 \end{figure}
 
 
-\begin{figure}
+
+\subsection{Diisobutyl phthalate}
+
+The PID of the reaction of DiBP with H$_3$O$^+$ (\autoref{fig:PH_DiBP_fs}) is comparable to that of its isomer DBP (\autoref{fig:PH_DBP_fs}).
+The two dominant ions are as well the protonated parent molecule ((C$_{16}$H$_{22}$O$_4$)H$^+$ at \textit{m/z} 279.16) at lower \textit{E/N} and protonated phthalic anhydride at higher \textit{E/N}, but for DiBP the crossover point is at ca. 170 Td, instead of at ca. 130 Td as it occurs for DBP.
+Another two product ions are observed:  C$_4$H$_9^+$ is tentatively assigned to protonated isobutene and 
+at low \textit{E/N} there are traces of the loss of isobutanol (C$_{12}$H$_{13}$O$_3^+$ at \textit{m/z} 205.09).
+
+
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DiBP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of DiBP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:DiBP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of DiBP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_DiBP_fs}
 \end{figure}
 
-\begin{figure}
+\subsection{Benzyl butyl phthalate
+and dibenzyl phthalate}
+
+
+
+These two phthalates have a benzyl ester group in common and this seems to be crucial in the proton transfer and fragmentation processes as they show very similar product ion distributions (\autoref{fig:PH_BBP_fs} for BBP and \autoref{fig:PH_DBeP_fs} for DBeP).
+This suggests that the protonation sites in the benzyl branch are more basic than in the butyl branch.
+The ion at \textit{m/z} 91.05, assigned to benzyl radical (C$_7$H$_7^+$), is the dominant ion throughout the whole \textit{E/N} range and this agrees with the mass spectral database mzCloud (HighChem LLC, Slovakia). However, mzCloud also reports protonated phthalic anhydride as a product ion at lower collisional energies, and this ion is also reported in the literature for BBP  \cite{earls2003gas}, but it was not observed in our study. 
+We also observed a smaller percentage of C$_6$H$_7^+$ and C$_7$H$_7$O$^+$. These are  tentatively assigned to protonated benzene and protonated benzaldehyde, respectively.
+
+
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/BBP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of BBP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:BBP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of BBP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_BBP_fs}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DBeP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of DBeP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:DBeP_fs}
+\caption{Percentage product ion distribution resulting from the reaction of DBeP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_DBeP_fs}
 \end{figure}
 
 
+\subsection{Diethylhexyl phthalate}
 
 
-\begin{figure}
+\textit{[NOTE: This one was measured in the Smiths PTR because the sample arrived the same day they took the new PTR away to the forest. I measured it in the same conditions as I measured the others in the littoral ptr. I had measured DMP and  DEP as well in Smiths and the results are quite similar to those obtained in Littoral].}
+
+
+DEHP is the most widely used plasticiser. The total world consumption in 2012 was estimated to be of 3 billion tonnes \cite{doi:10.1002/14356007.a20_181.pub2}.
+It is anticipated to be a human carcinogen \cite{us201614th}.
+
+
+
+\autoref{fig:PH_DEHP_fs} shows that the reaction of DEHP with H$_3$O$^+$ yield similar PID results to those of MEHP (\autoref{fig:PH_MEHP_fs}), but the main difference is that here protonated phthalic anhydride is not the dominant ion for DEHP for any \textit{E/N} value. Instead, there are many ions that become dominant throughout the studied \textit{E/N} range.
+The only two ions that were observed in DEHP and not in MEHP are  C$_{15}$H$_{23}$O$_2^+$
+and C$_7$H$_{7}$O$_2^+$, tentatively assigned to 
+protonated 2-ethylhexyl benzoate  and protonated benzoic acid, respectively.
+Similarly to MEHP, the ion at \textit{m/z} 279.16, which would correspond to the loss of C$_8$H$_{16}$ from protonated DEHP, was not observed.
+The protonated parent molecule (C$_{24}$H$_{38}$O$_{4}$ at \textit{m/z} 391.28) was not observed either.
+
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DEHP-BR.png}
-\caption{Percentage product ion distribution  resulting from the reaction of DEHP with H\textsubscript{3}O\textsuperscript{+} as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:DEHP_fs}
+\caption{Percentage product ion distribution  resulting from the reaction of DEHP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+\label{fig:PH_DEHP_fs}
 \end{figure}
+
+
+
+
+
+
+
+\subsection{Separation of isomers: DBP vs DiBP vs MEHP }
+DBP, DiBP and MEHP are isomers and thus their protonated parent ion is found at the same \textit{m/z} ((C$_{16}$H$_{22}$O$_4$)H$^+$, \textit{m/z} 279.16). However, in our study we have found that the reaction of each of them with H$_3$O$^+$ yields different product ion distributions at different reduced electric fields that allows to differentiate between them without needing any initial pre-separation.
+    The difference between MEHP and the butyl-containing isomers (i.e. DBP and DiBP)  is the presence of the protonated parent ion at low \textit{E/N} for DBP and DiBP, which is not found for MEHP. To distinguish between DBP and DiBP it is necessary to compare other minor ions.
+The main differences between these two isomers is the higher signal of C$_{12}$H$_{13}$O$_3^+$ (\textit{m/z} 205.09) from DBP at low \textit{E/N} and C$_{7}$H$_{7}$O$_2^+$ (\textit{m/z} 123.04) at high E/N, while in the case of DiBP the presence of the former is very little and the latter is less than 3\% (for this reason it is not included in plots and tables). 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -344,6 +593,25 @@ C\textsubscript{24}H\textsubscript{38}O\textsubscript{4}  & 41.04  & C\textsubsc
 
 
 \section{Conclusions}
+    This study has demonstrated the feasibility of the  detection of phthalates in proton transfer reaction mass spectrometry using headspace analysis. 
+We  have studied the product ions as a function of the drift tube voltage and reduced electric field.
+    We have found different product ion distributions for  DBP, DiBP and MEHP that allows to distinguish between these three phthalate ester isomers.
+    
+Furthermore, all the alkyl diester phthalates lose  the corresponding alcohol in each case (i.e. methanol for DMP, ethanol for DEP, propanol for DPP and butanol for DBP). The abundance of this characteristic ion decreases with  the alkyl chain length. For instance, for DEP the loss of methanol (at \textit{m/z} 163.04) is the dominant ion throughout all the \textit{E/N} range, while for DBP the loss of butanol is only ca. 20\% at 80 Td and it steadily decreases with the reduced electric field. 
+
+Another characteristic ion found in many phthalates is protonated phthalic anhydride (\textit{m/z} 149.02, C$_8$H$_5$O$_2^+$). In a database containing  ca. 140000 analysed mass spectra,  150 of the 700 spectra where \textit{m/z} 149 was present corresponded to a phthalate \cite{mclafferty1993interpretation} so it is a fairly good indicator of the presence of a compound from this family. 
+However, in PTR-MS this ion is not always the dominant one and, when present, its abundance depends on  the reduced electric field. For the alkyl diester phthalates the abundance of protonated phthalic anhydride  increases with the alkyl chain length and with the reduced electric field.
+
+We also found  benzoic acid ester ions (benzoates) in some of the phthalates, namely propyl benzoate for DPP, butyl benzoate for DBP and 2-ethylhexyl benzoate for DEHP.
+
+
+The range of collisional energy provided by a  PTR-MS instrument was proved to be suitable to see interesting fragmentation that allowed to characterise the phthalate product ions.
+
+Many of the fragmentation pathways were only observed at \textit{E/N} higher than a certain value or threshold which indicates that they are a consequence of field-activated collissssssssssssssssssion induced dissss.
+%
+This can be either a pathway that is not thermodynamically allowed or a pathway that, whilst thermodynamically feasible, it is kinetically rather thermodynamically driven.
+
+
 
 
 

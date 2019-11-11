@@ -151,7 +151,7 @@ The experimental data for each phthalate was obtained by averaging two 10-second
 
 
 
-        \begin{figure}[htbp]
+        \begin{figure}[htb]%[htbp]
         \centering
         \includegraphics[height=0.4\textheight]{pics/PH/RI-BR.png}
         \caption{Reagent ion intensity plot as a function of the drift voltage and the \textit{E/N}.}
@@ -196,21 +196,26 @@ Due to the lack of comparable studies in the literature, the mzCloud mass spectr
 
 
 \section{Results and discussion}
-\autoref{table:PID} shows a summary of the observed product ions and their associated percentage product ion distributions at \textit{E/N} values of 100, 140 and 180 Td resulting from the reactions of H$_3$O$^+$ with each of the studied phthalate esters. 
-%
 The reaction of the phthalate esters with (H$_2$O)$_n$H$_3$O$^+$ for n>0 is negligible because of the low abundance of these reagent ions (see \autoref{fig:PH_RI}) and hence only reactions with H$_3$O$^+$ are considered here (except for phthalic acid).
 %
 Furthermore, only the proton affinity of DMP (940 kJ mol$^{-1}$) %(936 - 942 kJ mol$^{-1}$)
 is known  \cite{michalczuk2019isomer}. 
 %
-\citeauthor{doi:10.1063/1.556018}  only reported the proton affinity for two DMP isomers: dimethyl isophthalate (843.5 kJ mol$^{-1}$) and dimethyl terephthalate (843.2 kJ mol$^{-1}$) \cite{doi:10.1063/1.556018}.
+\citeauthor{doi:10.1063/1.556018}  only reported the proton affinity for two DMP isomers: dimethyl isophthalate (843.5 kJ mol$^{-1}$) and dimethyl terephthalate (843.2 kJ mol$^{-1}$), which are not included in this study \cite{doi:10.1063/1.556018}.
 %
 The PA is hence unknown for the rest of the studied substances although they will  be higher than that of water because they undergo proton transfer with H$_3$O$^+$, and, by comparing with the value for DMP from \citeauthor{michalczuk2019isomer}, it is likely that they will be also higher than that of the water dimer.
  
+ \autoref{table:PID} shows a summary of the observed product ions and their associated percentage product ion distributions at \textit{E/N} values of 100, 140 and 180 Td resulting from the reactions of H$_3$O$^+$ with each of the studied phthalate samples. 
+%
+The most common fragmentation pathway observed in the present study is the loss of the two phthalate branches, one of them as an ester and the other one as an alcohol including the ester oxygen and the proton, as indicated in \autoref{fig:PH_fr}.
+%
+This ion is not observed with all the phthalates (e.g. dimethyl and diallyl phthalate), but when this is a product ion its abundance increases with the reduced electric field, which indicates that the fragmentation is collision-induced.
+%
+Another common product ion is the one arinsing from the loss of a formate group.
+%
+A more complete diagram of the possible fragmentation pathways for the phthalates is that given by \citeauthor{yin2014mass} for electron impact ionisation \cite{yin2014mass}.
 
-
-
-
+% If longtable does not split over pages, remove the afterpage
 \afterpage{% for longtable to start in new page
 % font needs to be smaller
 {\small
@@ -253,7 +258,7 @@ DAP                                                      & 39.02  & C$_3$H$_3^+$
 C$_{14}$H$_{14}$O$_4$ & 41.04  & C$_3$H$_5^+$                        & 2  & 3  & 24 \\
 246.09                                                   & 81.07  & C$_6$H$_9^+$                        & 4  & 10 & 19 \\
                                                          & 189.06 & C$_{11}$H$_9$O$_3^+$     & 10 & 27 & 29 \\
-                                                         & 247.1  & (C$_{14}$H$_{14}$O$_4$)H$^+$ & 84 & 60 & 13\\
+                                                         & 247.10  & (C$_{14}$H$_{14}$O$_4$)H$^+$ & 84 & 60 & 13\\
 \hline
 DPP       & 79.05                & C$_6$H$_7^+$                           & 1            & 1            & 5            \\
 C$_{14}$H$_{18}$O$_4$          & 105.03               & C$_7$H$_5$O$^+$                          & 4            & 5            & 5            \\
@@ -267,7 +272,7 @@ DBP                                                      & 79.05  & C$_6$H$_7^+$
 C$_{16}$H$_{22}$O$_4$ & 105.03 & C$_7$H$_5$O$^+$                       & 4  & 5  & 5  \\
 278.15                                                   & 123.04 & C$_7$H$_7$O$_2^+$      & 8  & 15 & 13 \\
                                                          & 149.02 & C$_8$H$_5$O$_3^+$      & 15 & 41 & 68 \\
-                                                         & 179.1  & C$_{11}$H$_{15}$O$_2^+$    & 14 & 5  & 1  \\
+                                                         & 179.10  & C$_{11}$H$_{15}$O$_2^+$    & 14 & 5  & 1  \\
                                                          & 205.09 & C$_{12}$H$_{13}$O$_3^+$    & 19 & 4  & 2  \\
                                                          & 279.16 & (C$_{16}$H$_{22}$O$_4$)H$^+$ & 40 & 30 & 8 \\
 \hline
@@ -314,7 +319,12 @@ C$_{24}$H$_{38}$O$_4$  & 41.04  & C$_3$H$_5^+$                     & 0  & 3  & 2
 }% end of scope of afterpage directive 
 
 
-
+\begin{figure}[htb]%[htbp]
+\centering
+\includegraphics[height=0.1\textheight]{pics/PH/frag.png}
+\caption{General fragmentation pathway from the protonated parent to  protonated phthalic anhydride at \textit{m/z} 149. Note that the neutrals molecules are omitted.}
+\label{fig:PH_fr}
+\end{figure}
 
 
 
@@ -325,6 +335,16 @@ C$_{24}$H$_{38}$O$_4$  & 41.04  & C$_3$H$_5^+$                     & 0  & 3  & 2
 \autoref{fig:PH_PAcid} shows the PID plot for the reaction of phthalic acid with the reagent ions as a function of the drift voltage and the reduced electric field. 
 %
 Only two product ions were observed: the protonated parent molecule  ((C$_8$H$_6$O$_4$)H$^+$)  at \textit{m/z} 167 and  protonated phthalic anhydride (C$_8$H$_{5}$O$_3^+$) at \textit{m/z} 149.
+%
+The latter is a characteristic phthalate product ion and is observed with many of these compounds.
+
+    \begin{figure}[htb]
+    \centering
+    \includegraphics[height=0.4\textheight]{pics/Pacid-BR.png}
+    \caption{Percentage product ion distribution resulting from the reaction of phthalic acid with (H$_2$O)$_n$H$_3$O$^+$ (n = 0, 1) as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+    \label{fig:PH_PAcid}
+    \end{figure}
+
 
 The fact that these product ions resemble the reagent ions in \autoref{fig:PH_RI} indicates that the protonated parent ion is a product of the non-dissociative reaction of phthalic acid with (H$_2$O)H$_3$O$^+$, which is only found at trace levels at low \textit{E/N}.
 %
@@ -359,35 +379,39 @@ The formation of this ion needs  protonation of one of the hydroxy oxygen atoms,
 %The loss of water  requires the proton to be on one of the two alkoxy oxygens while hydrogen bonded to the other one to yield a barrierless disociation, as it is observed for all the \textit{E/N} range (\textit{m/z} 149.02 roughly mirrors the PID of H$_3$O$^+$ in \autoref{fig:PH_RI} while \textit{m/z} 167.03 mirrors that of (H$_2$O)H$_3$O$^+$).
 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[height=0.4\textheight]{pics/Pacid-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of phthalic acid with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:PH_PAcid}
-\end{figure}
+
 
 
 
 \subsection{Dimethyl phthalate}
-DMP is the phthalate diester with the shortest alkyl chain. It is produced from phthalic anhydride and methanol \cite{lowenheim1975industrial} and  its main non-industrial application is as insect repellent for personal protection against biting insects  \cite{o2013merck,brown1997insect}.
+DMP is the phthalate diester with the shortest alkyl chain. It is produced from phthalic anhydride and methanol, and  its main non-industrial application is as insect repellent for personal protection against biting insects  \cite{lowenheim1975industrial,o2013merck,brown1997insect}.
 
 
-Dissociative proton transfer to yield C$_9$H$_{7}$O$_3^+$ at \textit{m/z} 163.04 (i.e. loss of methanol from the protonated parent)
+Dissociative proton transfer to yield C$_9$H$_{7}$O$_3^+$ at \textit{m/z} 163 after the loss of methanol from the protonated parent 
 is the dominant channel for the reaction of DMP with H$_3$O$^+$ (\autoref{fig:PH_DMP_fs}).
-The protonated parent ion, (C$_{10}$H$_{10}$O$_4$)H$^+$ at \textit{m/z} 195.07, only represents ca. 25\% of the total product ion signal at around 80 Td and it steadily decreases as the \textit{E/N} increases.
+The protonated parent ion, (C$_{10}$H$_{10}$O$_4$)H$^+$ at \textit{m/z} 195, only represents ca. 25\% of the total product ion signal at around 80 Td and it steadily decreases as the \textit{E/N} increases.
 %
-Interestingly, DMP is the only one of the alkyl diester phthalates studied here in which protonated phthalic anhydride is not a product ion. The formation of protonated phthalic anhydride would require the further loss of the remaining methyl group in the ion observed at \textit{m/z} 163.04.
+Interestingly, it was found that DMP is the only one of the alkyl diester phthalates studied here in which protonated phthalic anhydride is not a product ion, which agrees with the results from other techniques in the literature \cite{yin2014mass}.
+%
+The formation of protonated phthalic anhydride would require the further loss of the remaining methyl group in the ion observed at \textit{m/z} 163.
 %
 This is comparable to the ion with \textit{m/z} 123 being observed with all the benzoates except with methyl benzoate (see section \ref{section:MeBz}). 
 
 
 
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DMP-BR.png}
 \caption{Percentage product ion distribution resulting from the reaction of DMP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
 \label{fig:PH_DMP_fs}
 \end{figure}
+
+%\begin{figure}[htb]%[htbp]
+%\centering
+%\includegraphics[height=0.1\textheight]{pics/PH/DMP_frag.png}
+%\caption{DMP fragmentation pathway from the protonated parent to C$_9$H$_{7}$O$_3^+$ at \textit{m/z} 163. . Note that the neutrals molecules are omitted.}
+%\label{fig:PH_DMP_fr}
+%\end{figure}
 
 
 
@@ -395,13 +419,17 @@ This is comparable to the ion with \textit{m/z} 123 being observed with all the 
 
 
 \autoref{fig:PH_DEP_fs} shows the PID plot for the reaction of DEP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field.
-At low \textit{E/N}, the most abundant ion at ca. 60\% is the protonated parent molecule, (C$_{12}$H$_{14}$O$_4$)H$^+$  at \textit{m/z} 223.10, which steadily decreases as the reduced electric field increases.
-Furthermore, another product ion is found at low \textit{E/N} at \textit{m/z} 75.04, and it is tentatively assigned to protonated ethyl formate (C$_3$H$_{7}$O$_2^+$).
-The ion at \textit{m/z} 177.05, assigned to C$_{10}$H$_{9}$O$_3^+$, comes from the loss of ethanol from the protonated parent molecule and it peaks at around 150 Td with ca. 65\% of the total product ion signal.
-At high \textit{E/N}, the dominant ion is protonated phthalic anhydride (C$_8$H$_{5}$O$_3^+$), going up to 95\% for \textit{E/N} higher than 200 Td.
+At low \textit{E/N}, the most abundant ion at ca. 60\% is the protonated parent molecule, (C$_{12}$H$_{14}$O$_4$)H$^+$  at \textit{m/z} 223, which steadily decreases as the reduced electric field increases.
+%
+Another product ion is found at low \textit{E/N} at \textit{m/z} 75 and it is tentatively assigned to protonated ethyl formate (C$_3$H$_{7}$O$_2^+$).
+The ion at \textit{m/z} 177, assigned to C$_{10}$H$_{9}$O$_3^+$, comes from the loss of ethanol from the protonated parent molecule and it peaks at around 150 Td with ca. 65\% of the total product ion signal.
+At high \textit{E/N}, the dominant ion is protonated phthalic anhydride (C$_8$H$_{5}$O$_3^+$), formed through collision-induced dissociation, going up to 95\%. % for \textit{E/N} higher than 200 Td.
+%
+The MS$^2$ scan for the fragmentation of the MH$^+$ ion in the mzCloud database for diethyl phthalate agrees with the PTR-MS results in \autoref{fig:PH_DEP_fs} for higher \textit{E/N} than approximately 160 Td, although the protonated parent is not reported there while in the present PTR-MS experiments this ion represents ca. 10\% of the total ion signal at 160 Td
+\cite{mzcloudDEP}.
 
 
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DEP-BR.png}
 \caption{Percentage product ion distribution resulting from the reaction of DEP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
@@ -409,21 +437,38 @@ At high \textit{E/N}, the dominant ion is protonated phthalic anhydride (C$_8$H$
 \end{figure}
 
 
-
+\begin{figure}[htb]%[htbp]
+\centering
+\includegraphics[height=0.1\textheight]{pics/PH/DEP_frag.png}
+\caption{DEP fragmentation pathway from the protonated parent to the ions with \textit{m/z} 177 and \textit{m/z} 149 (i.e. protonated phthalic anhydride). Note that the neutrals molecules are omitted.}
+\label{fig:PH_DEP_fr}
+\end{figure}
 
 
 \subsection{Diallyl phthalate}
 DAP is a skin, eyes and mucous membranes irritant \cite{clayton1981patty}.
-Non-dissociative proton transfer ((C$_{14}$H$_{14}$O$_4$)H$^+$ at \textit{m/z} 247.10) is the dominant channel for the reaction of DAP with H$_3$O$^+$ from low reduced electric field up to around 150 Td (\autoref{fig:PH_DAP_fs}). Then the ion resulting from the loss of allyl alcohol (C$_{11}$H$_9$O$_3^+$ at \textit{m/z} 189.06) becomes dominant. At high \textit{E/N} we observe C$_3$H$_5^+$, tentively assigned to  the allyl radical,  and C$_3$H$_3^+$.
-The ion at \textit{m/z} 81.07 is C$_6$H$_9^+$.
+%
+It is used in ........
+
+
+Non-dissociative proton transfer to yield the protonated parent molecule, (C$_{14}$H$_{14}$O$_4$)H$^+$, at \textit{m/z} 247 is the dominant channel for the reaction of DAP with H$_3$O$^+$ from low reduced electric field up to around 150 Td (\autoref{fig:PH_DAP_fs}). Then the ion resulting from the loss of allyl alcohol (C$_{11}$H$_9$O$_3^+$ at \textit{m/z} 189) becomes dominant. At high \textit{E/N} we observe C$_3$H$_5^+$, tentatively assigned to  the allyl radical,  and C$_3$H$_3^+$.
+%
+These ions are produced in a cascade-like fragmentation pathway as the collisional energy increases.
+%
+However, another ion (i.e. C$_6$H$_9^+$ at \textit{m/z} 81) is observed over all the studied \textit{E/N} range.
+%
+Although its formation and structure are not clear yet, it has been reported at trace levels in the mzCloud database \cite{mzcloudDAP}.
+%
+One of its possible structures is protonated cyclohexadiene arising from the benzene core of the molecule, but this is hardly the correct one because this  is not observed with any other of the studied phthalates.
+%
+Another possibility would be that it comes from the two allyl (i.e. -CH$_2$CH=CH$_2$) branches but this is highly unlikely as in the most stable DAP conformer these branches are not close to each other.
+%
+Similarly to DMP, protonated phthalic anhydride was not observed in the DAP measurements.
 
 
 
 
-
-
-
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DAP-BR.png}
 \caption{Percentage product ion distribution resulting from the reaction of DAP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
@@ -434,32 +479,44 @@ The ion at \textit{m/z} 81.07 is C$_6$H$_9^+$.
 \subsection{Dipropyl phthalate}
 
 
-\autoref{fig:PH_DPP_fs} shows the PID for the reaction of H$_3$O$^+$ with DPP as a function of the reduced electric field for the from 80 to 205 Td.
-At low \textit{E/N}, the dominant ion is the protonated parent, (C$_{14}$H$_{18}$O$_4$)H$^+$, followed by the  loss of C$_4$H$_6$O$_2$ from the protonated parent, yielding C$_{10}$H$_{13}$O$_2^+$, tentatively assigned to protonated propyl benzoate, and the loss of propanol from the protonated parent, yielding C$_{11}$H$_{11}$O$_3^+$. The abundance of these three ions decrease with the reduced electric field and at ca. 150 Td protonated phthalic anhydride becomes dominant. At high \textit{E/N} we found protonated benzoic acid (C$_{7}$H$_{7}$O$_2^+$) and  protonated benzene (C$_6$H$_{7}^+$).
+\autoref{fig:PH_DPP_fs} shows the PID for the reaction of H$_3$O$^+$ with DPP as a function of the reduced electric field in the range from 80 to 205 Td.
+%
+    \begin{figure}[htb]%[htbp]
+    \centering
+    \includegraphics[height=0.4\textheight]{pics/DPP-BR.png}
+    \caption{Percentage product ion distribution resulting from the reaction of DPP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
+    \label{fig:PH_DPP_fs}
+    \end{figure}
+%
+At low \textit{E/N}, the dominant ion is the protonated parent, (C$_{14}$H$_{18}$O$_4$)H$^+$, followed by the  loss of one of the propyl formate (i.e. C$_4$H$_6$O$_2$) branches from the protonated parent, yielding C$_{10}$H$_{13}$O$_2^+$, tentatively assigned to protonated propyl benzoate, and the loss of propanol from the protonated parent, yielding C$_{11}$H$_{11}$O$_3^+$. 
+%
+The abundance of these three ions decrease with the reduced electric field and at ca. 150 Td protonated phthalic anhydride becomes dominant.
+%
+The ions found at high \textit{E/N} are protonated benzoic acid (C$_{7}$H$_{7}$O$_2^+$) and  protonated benzene (C$_6$H$_{7}^+$).
 A minor contribution is observed for the whole \textit{E/N} range from benzoyl$^+$ (C$_7$H$_{5}$O$^+$).
 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[height=0.4\textheight]{pics/DPP-BR.png}
-\caption{Percentage product ion distribution resulting from the reaction of DPP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
-\label{fig:PH_DPP_fs}
-\end{figure}
+
 
 
 
 \subsection{Dibutyl phthalate}
 
+%This is one of the most controlled and restricted phthalates in the EU, USA and  China.
+%
+The protonated parent ion  (C$_{16}$H$_{22}$O$_4$)H$^+$ at \textit{m/z} 279 is the most abundant ion from low \textit{E/N} up to around 130 Td, when protonated phthalic anhydride becomes the most abundant ion for the rest of the reduced electric field range (see \autoref{fig:PH_DBP_fs}).
+%
+At low \textit{E/N} we also found the  ion resulting from the loss of butanol from the protonated parent, C$_{12}$H$_{13}$O$_3^+$ at \textit{m/z} 205,  and the loss of butyl formate (i.e. C$_{5}$H$_{8}$O$_2$) to yield C$_{11}$H$_{15}$O$_2^+$ at \textit{m/z} 179, which is tentatively assigned to protonated butyl benzoate.
+%
+At high \textit{E/N} some minor ions are protonated benzoic acid (C$_{7}$H$_{7}$O$_2^+$), benzoyl$^+$ (C$_7$H$_{5}$O$^+$) and protonated benzene (C$_6$H$_{7}^+$) at \textit{m/z} 123, \textit{m/z} 105 and \textit{m/z} 79, respectively.
 
-This is one of the most controlled and restricted phthalates in the EU, USA and  China.
-The protonated parent ion (\textit{m/z} 279.16, (C$_{16}$H$_{22}$O$_4$)H$^+$) dominates from low \textit{E/N} up to around 130 Td, when protonated phthalic anhydride becomes the most abundant ion for the rest of the reduced electric field range (see \autoref{fig:PH_DBP_fs}).
-At low \textit{E/N} we also found the resulting ion from the loss of butanol from the protonated parent, C$_{12}$H$_{13}$O$_3^+$ at \textit{m/z} 205.09,  and the loss of C$_{5}$H$_{8}$O$_2$ to yield C$_{11}$H$_{15}$O$_2^+$ at \textit{m/z} 179.10, which is tentatively assigned to protonated butyl benzoate.
-At high \textit{E/N} some minor ions are protonated benzoic acid (C$_{7}$H$_{7}$O$_2^+$), benzoyl$^+$ (C$_7$H$_{5}$O$^+$) and protonated benzene (C$_6$H$_{7}^+$) at \textit{m/z} 123.04, \textit{m/z} 105.03 and \textit{m/z} 79.05, respectively.
+
+Tandem MS$^3$ spectra acquired by selecting the protonated parent at \textit{m/z} 279 and C$_{12}$H$_{13}$O$_3^+$ at \textit{m/z} 205 proves that the formation of protonated phthalic anhydride from protonated DBP can occur by subsequently fragmenting following the pathway described in \autoref{fig:PH_fr} \cite{mzcloudDBP}.
+%
 
 
 
-
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DBP-BR.png}
 \caption{Percentage product ion distribution resulting from the reaction of DBP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
@@ -473,7 +530,8 @@ At high \textit{E/N} some minor ions are protonated benzoic acid (C$_{7}$H$_{7}$
 
 
 This phthalate is an active metabolite of DEHP formed through hydrolysis. The detection of MEHP in urine of children has been linked to exposure to DEHP \cite{becker2004dehp}.
-Protonated phthalic anhydride is the dominant ion for all the \textit{E/N} range (\autoref{fig:PH_MEHP_fs}). 
+Protonated phthalic anhydride is the dominant ion for all the \textit{E/N} range (\autoref{fig:PH_MEHP_fs}).
+
 The protonated parent (\textit{m/z} 279.16) was not observed and all the other product ions we found come from the successive fragmentation of the 2-ethylhexyl ester group:
 the ion at \textit{m/z} 129.13 is C$_8$H$_{17}$O$^+$,
 the ion at \textit{m/z} 113.13 is C$_8$H$_{17}^+$,
@@ -486,7 +544,7 @@ the ion at \textit{m/z} 41.04 is C$_3$H$_5^+$
 and
 the ion at \textit{m/z} 39.02 is C$_3$H$_3^+$. 
 
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/MEHP-BR.png}
 \caption{Percentage product ion distribution resulting from the reaction of MEHP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
@@ -505,7 +563,7 @@ at low \textit{E/N} there are traces of the loss of isobutanol (C$_{12}$H$_{13}$
 
 
 
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DiBP-BR.png}
 \caption{Percentage product ion distribution resulting from the reaction of DiBP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
@@ -525,14 +583,14 @@ We also observed a smaller percentage of C$_6$H$_7^+$ and C$_7$H$_7$O$^+$. These
 
 
 
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/BBP-BR.png}
 \caption{Percentage product ion distribution resulting from the reaction of BBP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
 \label{fig:PH_BBP_fs}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DBeP-BR.png}
 \caption{Percentage product ion distribution resulting from the reaction of DBeP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
@@ -543,7 +601,7 @@ We also observed a smaller percentage of C$_6$H$_7^+$ and C$_7$H$_7$O$^+$. These
 \subsection{Diethylhexyl phthalate}
 
 
-\textit{[NOTE: This one was measured in the Smiths PTR because the sample arrived the same day they took the new PTR away to the forest. I measured it in the same conditions as I measured the others in the littoral ptr. I had measured DMP and  DEP as well in Smiths and the results are quite similar to those obtained in Littoral].}
+%\textit{[NOTE: This one was measured in the Smiths PTR because the sample arrived the same day they took the new PTR away to the forest. I measured it in the same conditions as I measured the others in the littoral ptr. I had measured DMP and  DEP as well in Smiths and the results are quite similar to those obtained in Littoral].}
 
 
 DEHP is the most widely used plasticiser. The total world consumption in 2012 was estimated to be of 3 billion tonnes \cite{doi:10.1002/14356007.a20_181.pub2}.
@@ -560,7 +618,7 @@ The protonated parent molecule (C$_{24}$H$_{38}$O$_{4}$ at \textit{m/z} 391.28) 
 
 
 
-\begin{figure}[htbp]
+\begin{figure}[htb]%[htbp]
 \centering
 \includegraphics[height=0.4\textheight]{pics/DEHP-BR.png}
 \caption{Percentage product ion distribution  resulting from the reaction of DEHP with H$_3$O$^+$ as a function of the drift voltage and the reduced electric field in the range from 80 to 205 Td.}
@@ -574,9 +632,15 @@ The protonated parent molecule (C$_{24}$H$_{38}$O$_{4}$ at \textit{m/z} 391.28) 
 
 
 \subsection{Separation of isomers: DBP vs DiBP vs MEHP }
-DBP, DiBP and MEHP are isomers and thus their protonated parent ion is found at the same \textit{m/z} ((C$_{16}$H$_{22}$O$_4$)H$^+$, \textit{m/z} 279.16). However, in our study we have found that the reaction of each of them with H$_3$O$^+$ yields different product ion distributions at different reduced electric fields that allows to differentiate between them without needing any initial pre-separation.
-    The difference between MEHP and the butyl-containing isomers (i.e. DBP and DiBP)  is the presence of the protonated parent ion at low \textit{E/N} for DBP and DiBP, which is not found for MEHP. To distinguish between DBP and DiBP it is necessary to compare other minor ions.
-The main differences between these two isomers is the higher signal of C$_{12}$H$_{13}$O$_3^+$ (\textit{m/z} 205.09) from DBP at low \textit{E/N} and C$_{7}$H$_{7}$O$_2^+$ (\textit{m/z} 123.04) at high E/N, while in the case of DiBP the presence of the former is very little and the latter is less than 3\% (for this reason it is not included in plots and tables). 
+DBP, DiBP and MEHP are isomers and thus their protonated parent ion is found at the same \textit{m/z} ((C$_{16}$H$_{22}$O$_4$)H$^+$, \textit{m/z} 279).
+%
+However, in the study it was found that the reaction of each of them with H$_3$O$^+$ yields different product ion distributions at different reduced electric fields that allows to differentiate between them without needing any initial pre-separation.
+%
+The difference between MEHP and the butyl-containing isomers (i.e. DBP and DiBP)  is the presence of the protonated parent ion at low \textit{E/N} for DBP and DiBP, which is not found for MEHP.
+    %
+To distinguish between DBP and DiBP it is necessary to compare other minor ions.
+%
+The main differences between these two isomers is the higher signal of C$_{12}$H$_{13}$O$_3^+$ (\textit{m/z} 205) from DBP at low \textit{E/N} (i.e. around 20\%) and C$_{7}$H$_{7}$O$_2^+$ (\textit{m/z} 123) at high E/N, while in the case of DiBP the presence of the former is very little (i.e. c. 5\%) and the latter is less than 3\% (for this reason it is not included in plots and tables). 
 
 
 
@@ -594,12 +658,13 @@ The main differences between these two isomers is the higher signal of C$_{12}$H
 
 \section{Conclusions}
     This study has demonstrated the feasibility of the  detection of phthalates in proton transfer reaction mass spectrometry using headspace analysis. 
-We  have studied the product ions as a function of the drift tube voltage and reduced electric field.
+We  have studied the product ions as a function of the drift tube voltage and reduced electric field for ten phthalate esters and phthalic acid, including the most relevant phthalates, which are those banned in EU, USA and China at some proportion: DBP, BBP and DEHP.
     We have found different product ion distributions for  DBP, DiBP and MEHP that allows to distinguish between these three phthalate ester isomers.
     
 Furthermore, all the alkyl diester phthalates lose  the corresponding alcohol in each case (i.e. methanol for DMP, ethanol for DEP, propanol for DPP and butanol for DBP). The abundance of this characteristic ion decreases with  the alkyl chain length. For instance, for DEP the loss of methanol (at \textit{m/z} 163.04) is the dominant ion throughout all the \textit{E/N} range, while for DBP the loss of butanol is only ca. 20\% at 80 Td and it steadily decreases with the reduced electric field. 
 
-Another characteristic ion found in many phthalates is protonated phthalic anhydride (\textit{m/z} 149.02, C$_8$H$_5$O$_2^+$). In a database containing  ca. 140000 analysed mass spectra,  150 of the 700 spectra where \textit{m/z} 149 was present corresponded to a phthalate \cite{mclafferty1993interpretation} so it is a fairly good indicator of the presence of a compound from this family. 
+Another characteristic ion found in many phthalates is protonated phthalic anhydride (\textit{m/z} 149.02, C$_8$H$_5$O$_2^+$). \citeauthor{mclafferty1993interpretation}  claimed that from ca. 140000 analysed mass spectra (EI? or what?),  150 of the 700 spectra where the ion at \textit{m/z} 149 (i.e. protonated phthalic anhydride) was present corresponded to a phthalate,  so it is a fairly good indicator of the presence of a compound from this family \cite{mclafferty1993interpretation}. 
+%
 However, in PTR-MS this ion is not always the dominant one and, when present, its abundance depends on  the reduced electric field. For the alkyl diester phthalates the abundance of protonated phthalic anhydride  increases with the alkyl chain length and with the reduced electric field.
 
 We also found  benzoic acid ester ions (benzoates) in some of the phthalates, namely propyl benzoate for DPP, butyl benzoate for DBP and 2-ethylhexyl benzoate for DEHP.
@@ -607,7 +672,7 @@ We also found  benzoic acid ester ions (benzoates) in some of the phthalates, na
 
 The range of collisional energy provided by a  PTR-MS instrument was proved to be suitable to see interesting fragmentation that allowed to characterise the phthalate product ions.
 
-Many of the fragmentation pathways were only observed at \textit{E/N} higher than a certain value or threshold which indicates that they are a consequence of field-activated collissssssssssssssssssion induced dissss.
+Many of the fragmentation pathways were only observed at \textit{E/N} higher than a certain value or threshold which indicates that they are a consequence of field-activated collision-induced dissociation.
 %
 This can be either a pathway that is not thermodynamically allowed or a pathway that, whilst thermodynamically feasible, it is kinetically rather thermodynamically driven.
 

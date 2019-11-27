@@ -24,7 +24,15 @@
 \usepackage{floatrow}
 \usepackage{subfig}
 
-% COMENTED ON 27/7/19
+% To find the compiling time in the raw low page by page: timer: time in ms [page]
+\usepackage{atbegshi}
+\newcommand\showtimer{%
+  \message{^^Jtimer: \the\numexpr\the\pdfelapsedtime*1000/65536\relax}%
+  \pdfresettimer}
+\AtBeginDocument{\showtimer}
+\AtBeginShipout {\showtimer}
+
+% COMMENTED ON 27/7/19
 %\usepackage{pgfplots}
 %\pgfplotsset{width=0.8\linewidth,compat=1.9}
 %\usepackage{chemfig} 			%for chemical structures
@@ -159,7 +167,7 @@
 \include{chapters/1intro}
 \include{chapters/2ptrms}
 \include{chapters/3cocaine}
-%\include{chapters/65RF}
+\include{chapters/65RF}
 \include{chapters/66nitroanilines}
 \include{chapters/7ketones}
 \include{chapters/67phthalates}
@@ -182,7 +190,7 @@
 \renewcommand{\headrulewidth}{0pt} %this deletes the horizontal line
 
 \begin{appendices}
-\include{chapters/65RF}
+%\include{chapters/65RF}
 %%\include{appendix/physical_properties}
 \include{chapters/8anaesthetics}
 %\include{chapters/99otherstuff}

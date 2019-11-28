@@ -16,6 +16,7 @@
 \usepackage{multirow,bigdelim,dcolumn}
 \usepackage{graphicx}
 \usepackage{afterpage}  % load the afterpage package for longtables to start in new page
+\usepackage[section]{placeins}  % to have the figures within the section they are using \FloatBarrier
 
 % to look for the char +301 error
 %\DeclareUnicodeCharacter{0301}{*************************************}
@@ -24,13 +25,13 @@
 \usepackage{floatrow}
 \usepackage{subfig}
 
-% To find the compiling time in the raw low page by page: timer: time in ms [page]
-\usepackage{atbegshi}
-\newcommand\showtimer{%
-  \message{^^Jtimer: \the\numexpr\the\pdfelapsedtime*1000/65536\relax}%
-  \pdfresettimer}
-\AtBeginDocument{\showtimer}
-\AtBeginShipout {\showtimer}
+%%% To find the compiling time in the raw low page by page: timer: time in ms [page]
+%\usepackage{atbegshi}
+%\newcommand\showtimer{%
+%  \message{^^Jtimer: \the\numexpr\the\pdfelapsedtime*1000/65536\relax}%
+%  \pdfresettimer}
+%\AtBeginDocument{\showtimer}
+%\AtBeginShipout {\showtimer}
 
 % COMMENTED ON 27/7/19
 %\usepackage{pgfplots}

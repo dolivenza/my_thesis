@@ -10,8 +10,8 @@ are explained.
 
 
 \section{The PTR-ToF-MS}
-As stated in the introduction, PTR-MS is a sensitive technique for real-time monitoring of VOCs in air with a minimal sample preparation. PTR-MS uses hydronium as reagent ion to donate protons to the VOCs present in the analyte gas and detect trace concentrations of targeted compounds.  The newest PTR-MS instrument in our laboratory is shown in \autoref{fig:littoral}. It is a KORE Technology Ltd. RFIF Mk I PTR-ToF-MS.
-Briefly, the main  parts of a PTR instrument and their functions can be simplified to:
+As stated in the introduction, PTR-MS is a sensitive technique for real-time monitoring of VOCs in air with a minimal sample preparation. PTR-MS uses hydronium as reagent ion to donate protons to the VOCs present in the analyte gas and detect trace concentrations of targeted compounds.  The KORE Technology Ltd RFIF Mk I PTR-ToF-MS instrument in our laboratory is shown in \autoref{fig:littoral}. 
+The main  parts of a PTR-MS instrument and their functions can be simplified to:
 \begin{enumerate}
     \item Ion source: production of reagent ions.
     \item Drift tube: protonation and possible fragmentation of the analyte.
@@ -25,7 +25,7 @@ Briefly, the main  parts of a PTR instrument and their functions can be simplifi
 
 \bigskip
 \sidesubfloat[]{\includegraphics[width=0.95\linewidth]{pics/ptr-ilus.png}}
-\caption{(a) Picture of our  PTR-ToF-MS  with the TDU attached.  (b) Illustration of the same instrument (not to scale) including the naming convention.}
+\caption{(a) Picture of the KORE Technology Ltd RFIF Mk I PTR-ToF-MS  with the TDU attached.  (b) Illustration of the same instrument (not to scale) including the naming convention.}
 \label{fig:littoral}
 \end{figure}
 
@@ -35,7 +35,11 @@ Briefly, the main  parts of a PTR instrument and their functions can be simplifi
 \subsection{Ion source}
 The reagent ions that will ionise the sample are generated in the glow discharge (\acrshort{gd}) %that occurs
 in the ion source. Most PTR-MS instruments carry a hollow cathode discharge ion source, to which a voltage is supplied to ionise the gas that flows through it and create the plasma in which the reagent ions are being produced.
-There are different configurations in the market, like the recently developed one from Ionicon Analytik GmbH, which allows to quickly switch from different reagent ions by simultaneously using multiple off-axis cathodes \cite{lanza2015selective}. The one in our PTR-MS instrument is shown in \autoref{fig:cathode}.
+%
+The cathode in our PTR-MS instrument is shown in \autoref{fig:cathode},
+although there are alternatives available like the triple off-axis cathode recently developed by \citeauthor{trion} that  allows to quickly switch from different reagent ion species
+\cite{trion}.
+%
 Note that from now on I will indistinctly refer to plasma, discharge and glow discharge.
 
 
@@ -65,18 +69,22 @@ Glow discharge is a type of electrical discharge that occur at low pressures (mb
 
 During the standard use of the instrument, water vapour is supplied from the water reservoir through a needle valve to the cathode, where H$_3$O$^+$ ions are generated.
 The main reaction occurring in the ion source leading to the production of H$_3$O$^+$ from the electrical discharge of water vapour is the first one shown in \autoref{tb:reactions}. It starts when H$_2$O$^+$ has been produced through the electron impact ionisation of water. However, other water fragment ions can also undergo reactions that generate hydronium, following the other reactions shown in \autoref{tb:reactions}. The rate  at which these reactions happen is very close to the collisional  rate.
-Furthermore, hydronium ions can cluster to water molecules via hydrogen bonds to form the so-called water clusters, i.e. (H$_2$O)$_n$H$_3$O$^+$ with n = 1, 2, 3, ...
-Ideally, we want pure hydronium being injected into the drift tube.
+Furthermore, hydronium ions can cluster to water molecules via hydrogen bonds to form the so-called water cluster ions, i.e. (H$_2$O)$_n$H$_3$O$^+$ with n = 1, 2, 3, ...
+Ideally, the formation of these clusters should be avoided to inject pure hydronium into the drift tube.
 Otherwise, if the water cluster ions come into play, there are  proton transfer reactions simultaneously occurring in the drift tube with different energies, which makes it more difficult to understand the energetics associated with the different protonation and fragmentation pathways.
 
 
-The breakdown voltage, which is the voltage difference needed between cathode and anode to start the plasma, is approximately 750 volts in our instrument,
-but after the plasma has started, the cathode voltage decreases, as the potential difference required to maintain the discharge is smaller than the breakdown voltage and it is usually between 350 and 400 volts.
-The anode voltage floats with the voltage of the first plate of the drift tube, which can be adjusted by the user to set the drift voltage, which will be discussed in the next section. After the glow discharge switch is turned on, it can take the plasma up to a couple of minutes to start.
+The breakdown voltage, which is the voltage difference needed between cathode and anode to start the plasma, is of approximately 750 V for the cathode with the geometry described in \autoref{fig:cathode}.
+%
+However, after the plasma has started, the voltage difference to maintain the discharge goes down to approximately 350 - 400 V.
+%
+The anode voltage floats with the voltage of the first plate of the drift tube electrodes, which can be adjusted by the user to set the drift voltage, as will be discussed in the next section. After the glow discharge switch is turned on, it can take the plasma up to a couple of minutes to start.
 %Increasing the pressure in the drift tube can assist to start the plasma, as some of the gas in the drift tube will be back-streamed into the cathode and O$_2$ requires a lower voltage to start a plasma.
-In our instrument, the typical ion source pressure values are between 1 and 1.4 mbar.
+In our instrument, the ion source pressure is usually between 1 and 1.4 mbar.
 %If even with some back-streaming and setting the cathode at high pressure the plasma will not start, cleaning the ion source must be considered.
-The plasma struggling to get started or maintained indicates that the hollow cathode must be cleaned, as an aluminium oxide layer can form inside  and needs to be removed after some months of use. Another factor that affects the stability of the glow is the temperature of the oven that contains the ion source and the drift tube. We have experienced that the higher the temperature of the oven is, the higher the cathode pressure must be for the glow to be maintained.
+The plasma struggling to get started or maintained at a pressure  within the common operating range
+indicates that the hollow cathode must be cleaned, as an aluminium oxide layer can form inside  and needs to be removed. Another factor that affects the stability of the glow is the temperature of the oven that contains the ion source and the drift tube: %It has been observed that 
+the higher the temperature of the oven is, the higher the cathode pressure must be for the glow to be maintained.
 
 
 
@@ -118,7 +126,7 @@ Downstream from the ion source, the ions reach the so-called source drift (\acrs
 
 \subsection{Drift tube}
 The drift tube %(\acrshort{dt})
-is the region of a PTR-MS instrument where the protonation and possible fragmentation of the analyte occurs. It is also often referred to as the reactor. A picture of the DT is shown in \autoref{fig:dt}.
+is the region of a PTR-MS instrument where the protonation and possible fragmentation of the analyte occurs. It is also often referred to as the reactor. A picture of the DT out of the front-end of the PTR-ToF-MS is shown in \autoref{fig:dt}.
 
 \begin{figure}%[h]
 \centering
@@ -130,13 +138,13 @@ is the region of a PTR-MS instrument where the protonation and possible fragment
 
 
 %\subsubsection{Experimental details}
-As mentioned before, our %main
-instrument is a KORE Technology Ltd RFIF Series 1 PTR-ToF-MS.
-Its drift tube, whose schematic layout is shown in \autoref{fig:dt_diagram}, consists of 29 stainless-steel ring electrodes of 0.2 mm of thickness with a spacing of 3.2 mm per plate inside a cylinder of resistive glass.
+
+The drift tube of the KORE Technology Ltd RFIF Series 1 PTR-ToF-MS, whose schematic layout is shown in \autoref{fig:dt_diagram}, consists of 29 stainless-steel ring electrodes of 0.2 mm of thickness with a spacing of 3.2 mm per plate inside a cylinder of resistive glass.
 The inner diameter of these electrodes is 40 mm in the first half of the stack and it gradually decreases in the second half to 6 mm.
 A 1 M$\Omega$ resistor chain connected to the electrodes allows to supply a linearly decreasing potential to each of them when a voltage is applied between the first and the last plates, generating an electric field in the reactor known as DC field.
 When the instrument is operating in these conditions (i.e. without the RF field explained later in \autoref{section:rfif}), we refer to it as working in DC mode or DC-only mode.
 % this is repeated in the RF paper
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.6\linewidth]{pics/ac-2016-02982x_0002.png}
@@ -163,17 +171,17 @@ The DC electric field (see \autoref{fig:dt_simion}) drags the ions across the re
 
 
 \subsubsection{Reduced electric field}
-As the collisional energy depends not only on the electric field, \acrshort{e}, but also on the buffer gas in the reactor, it is convenient to use the reduced electric field, \textit{\acrshort{en}}, as a measure of the collisional energy delivered to the ions.
+As the collisional energy depends not only on the electric field strength (\acrshort{e}) but also on the buffer gas in the reactor, it is convenient to use the reduced electric field (\textit{\acrshort{en}}) as a measure of the collisional energy delivered to the ions.
 First, the electric field strength  is defined by the potential difference between the first and the last plate in the reactor divided by its length (\autoref{eq:E}):
 \begin{equation}
 E = \frac{V_d}{L}
 \label{eq:E}
 \end{equation}
-where \acrshort{Vd} is the so-called drift voltage and it is equal to the voltage difference between the first and the last plate of the reactor, known as PTR Entry and PTR Exit,
+where \acrshort{Vd} is the so-called drift voltage and it is equal to the voltage difference between the first and the last plate of the reactor, known as PTR Entry and PTR Exit voltages,
 that can be adjusted by the user, and L is the length of the drift tube, which is 9.36 cm in our newest instrument.
 For instance, a voltage difference between first and last plates of 250 V corresponds to an electric field of 26.71 V/cm.
 
-Similarly, the gas number density, \acrshort{n}, is defined as the number of gas particles per unit volume and can be calculated from the ideal gas equation to be (\autoref{eq:N}):
+Similarly, the gas number density (\acrshort{n})  is defined as the number of gas particles per unit volume and can be calculated from the ideal gas equation to be (\autoref{eq:N}):
 \begin{equation}
 N = \frac{N_A}{V_{mol}}\frac{P_d}{P_0}\frac{T_0}{T_d}
 \label{eq:N}
@@ -183,14 +191,14 @@ For the standard operations conditions of 1 mbar and 100$^{\circ}$C, N is 1.94$\
 The ratio \textit{E/N} in this case would be 26.71 V cm$^{-1}$/1.94$\times$10$^{16}$ cm$^{-3}$ $\simeq$ 1.38$\times$10$^{-15}$ V cm$^{2}$.
 However, it is usual to express the reduced electric field in a different unit called Townsend (\acrshort{td}), which corresponds to 10$^{-17}$ V cm$^{2}$.
 Thus, 1.38$\times$10$^{-15}$ V cm$^{2}$ corresponds to a value of 138 Td.
-Typically, a PTR-MS instrument is operated between 120 and 140 Td but going as low as 80 Td or as high as 240 Td is sometimes crucial to get a good picture of the dependence of the fragmentation with the collisional energy.
+Typically, a PTR-MS instrument is operated between 120 and 140 Td but going as low as 80 Td or as high as 240 Td is sometimes crucial to get a good picture of the dependence of the ion-molecule reactions with the collisional energy.
 
 The ions inside the reactor reach a steady velocity, the so-called drift velocity, \acrshort{vd}, which is proportional to the electric field (\autoref{eq:vd}):
 \begin{equation}
 v_d = K\cdot E
 \label{eq:vd}
 \end{equation}
-where \acrshort{kk} is the ion mobility, which depends on the ion's mass and structure, and the temperature and pressure in the reactor, and E the electric field in the drift tube.
+where \acrshort{kk} is the ion mobility, which depends on the ion's mass and structure, and the temperature and pressure in the drift tube, and E the electric field strength.
 Note that the product of the ion mobility and the electric field must not be mistaken with the kinetic energy, often referred to as KE.
 Also note that the drift velocity does not represent the velocity of an individual ion but an average over the ion cloud, and it can be also  expressed in terms of the reduced mobility, \acrshort{kk0}, and the gas number density at standard pressure and temperature, \acrshort{n0}:
 \begin{equation}
@@ -204,7 +212,7 @@ v_d = K_0 N_0 \frac{E}{N}
 % \label{eq:n0}
 % \end{equation}
 
-Moreover, the expression for the total mean kinetic  energy of an ion, including both the thermal energy and the energy coming from the electric field, was formulated by \citeauthor{wannier1951bell} \cite{wannier1951bell,wannier1952motion} (\autoref{eq:KEions}):
+Moreover, the expression for the total mean kinetic  energy of an ion, including both the thermal energy and the energy coming from the electric field, was formulated by \citeauthor{wannier1951bell} \cite{wannier1951bell,wannier1952motion}: % (\autoref{eq:KEions}):
 \begin{equation}
     \label{eq:KEions}
     KE_{ion} = \frac{3}{2}k_B T + \frac{1}{2}m_{ion} v_d^2 + \frac{1}{2}m_b v_d^2
@@ -212,22 +220,39 @@ Moreover, the expression for the total mean kinetic  energy of an ion, including
 The first term represents the contribution of the thermal energy to the ion's kinetic energy, with k$_B$ the Boltzmann constant and T  the drift tube temperature.
 The second term relates to the kinetic energy of the ion from being dragged by the electric field at a drift velocity v$_d$, with m$_{ion}$ the mass of the ion.
 Finally, \citeauthor{wannier1951bell} added the last term as the contribution to the ion's kinetic energy  from the randomly-oriented velocity of the ions coming from collisions between the ions and the buffer gas molecules of mass m$_b$, which would be 28.0 or 28.8 g/mol, depending on if N$_2$ or lab air is used as buffer gas.
+%
+This last term can be used to describe an ``effective temperature'' T$_{eff}$ of the ions according to 
+\citeauthor{revercomb1975theory} (\autoref{eq:teff})
+\cite{revercomb1975theory}.
+%
+An estimated drift velocity of 900 m/s at 120 Td and a drift tube temperature of 100$^{\circ}$C yields T$_{eff}$ $\simeq$ 1280 K (i.e. approximately 1000$^{\circ}$C).
+%
+Whilst this looks like a huge increase in temperature, the ion’s kinetic energy is still way higher.
+%
+For an ion of \textit{m/z} 100 colliding with N$_2$ buffer gas molecules at 120 Td, the mean kinetic energy would be 0.58 eV, with the contribution from $(3/2)k_{B}T_{eff}$  only being 0.17 eV (i.e. around 29\% of the mean kinetic energy).
+%
+\begin{equation}
+    T_{eff} = T\left(1 + \frac{m_b v_d^2}{3 k_B T}\right)
+    \label{eq:teff}
+\end{equation}
 
-However, to properly characterise the energy involved in an ion-molecule collision, the relative energy of the participating bodies must be used instead of the total kinetic energy. This is given by the
+
+To properly characterise the energy involved in an ion-molecule collision, the relative energy of the participating bodies must be used instead of the total kinetic energy. This is given by the
 %Because the \acrshort{en} is not unambiguously defined, ie different values of P, T and  V$_d$ can yield the same \acrshort{en}.
 %Besides the reduced electric field,
 the kinetic energy of the collision %of the ion and neutral (analyte)
-in the centre-of-mass frame of reference, \acrshort{kecm} (\autoref{eq:cm}) \cite{mcfarland1973flow}:
+in the centre-of-mass frame of reference, %\acrshort{kecm} (\autoref{eq:cm}) 
+\cite{mcfarland1973flow}:
 \begin{equation}
 \label{eq:cm}
 KE_{CM} = \frac{1}{2}\mu (v_{ion}^2 + v_n^2)
 \end{equation}
-where µ is the reduced mass of the 2-body system (\autoref{eq:reduced_mass})%, and v$_{ion}$ and v$_n$ are the ion and neutral velocities, respectively.
+where µ is the reduced mass of the 2-body system %(\autoref{eq:reduced_mass})%, and v$_{ion}$ and v$_n$ are the ion and neutral velocities, respectively.
 \begin{equation}
 \label{eq:reduced_mass}
 \frac{1}{\mu} = \frac{1}{m_{ion}} + \frac{1}{m_{n}}
 \end{equation}
-and the kinetic energy of the ion and the neutral are defined by \autoref{eq:KEion2} and \autoref{eq:KT}, respectively.
+and the kinetic energy of the ion and the neutral are defined by \autoref{eq:KEion2} and \autoref{eq:KT}, respectively:
 \begin{equation}
 \label{eq:KEion2}
 KE_{ion} = \frac{1}{2}m_{ion}v_{ion}^2
@@ -245,9 +270,9 @@ KE_{CM} = \frac{m_n}{m_n + m_{ion}} \left( \frac{m_{ion}v_d^2}{2} + \frac{m_{b}v
 \end{equation}
 %
 where the sub-index $n$ refers to the neutral molecule in both an ion-buffer gas collision or an ion-analyte collision, where only proton or charge transfer will occur in the latter case.
-The difference between m$_n$ and m$_b$ for an ion-buffer gas collision is that m$_b$ is an average of the masses of the different species in the buffer gas, while m$_n$ is the mass of the species the ion is colliding with in each case (e.g. N$_2$ or O$_2$ for lab air).
+The difference between m$_n$ and m$_b$ for an ion-buffer gas collision is that m$_b$ is an average of the masses of the different species in the buffer gas, while m$_n$ is the mass of the species the ion is colliding with in each collision (e.g. N$_2$ or O$_2$ for lab air, if the rest of the constituents of air are neglected).
 It is also important to bear in mind that v$_d$ and v$_{ion}$ are not necessarily the same, as v$_{ion}$ refers not only to the field-aligned velocity.
-Note that, as v$_d$ is proportional to the \textit{E/N}, the KE\textsubscript{CM} is quadratic with the \textit{E/N}, as shown in \autoref{fig:KE} for cocaine and 2-butanone, which are two analyte molecules with a considerable mass difference and both are mentioned in this thesis. Their mass difference results in more energetic collisions (10-15\%) for cocaine than for 2-butanone.
+Note that, as v$_d$ is proportional to the \textit{E/N}, the KE\textsubscript{CM} is quadratic with the \textit{E/N}, as shown in \autoref{fig:KE} for cocaine and 2-butanone, which are two analyte molecules with a considerable mass difference and both are mentioned in this thesis. Their mass difference results in more energetic collisions (10 - 15\%) for cocaine than for 2-butanone.
 
 
 
@@ -281,29 +306,31 @@ collisions of H$_3$O$^+$ with cocaine (C$_{17}$H$_{21}$NO$_4$, 303 g/mol) or 2-b
 
 
 Contrary to the reduced electric field, the centre-of-mass kinetic energy is mass-dependent. %and depends on the ions mobility through their drift velocity.
-The centre-of-mass is used rather than the lab reference frame as the proton transfer reactions are inelastic collisions because there is a transference of mass but still in the centre-of-mass reference frame the sum of the linear momentum of each of the molecules is equal to zero both before and after the collision. % (\autoref{eq:cm2}).
+The centre-of-mass is used rather than the lab reference frame as proton transfer reactions involve inelastic collisions because there is a transference of mass, but still in the centre-of-mass reference frame the sum of the linear momentum of each of the molecules is equal to zero both before and after the collision. % (\autoref{eq:cm2}).
 %
 %\begin{equation}
 %\label{eq:cm2}
 %\sum_i \vec{p}_{i,CM} = 0
 %\end{equation}
 %
-However, the main challenge when using \autoref{eq:cm_final} is to measure the drift velocity accurately enough. This can be done, for instance, using the Hadamard transformation \cite{doi:10.1002/rcm.7254}, or it can be calculated from the ion mobility from \autoref{eq:vd2}.
+Furthermore, the main challenge and source of error when using \autoref{eq:cm_final} is to measure the drift velocity accurately enough. This can be estimated from the ion mobility (\autoref{eq:vd2}) or using the Hadamard transformation \cite{doi:10.1002/rcm.7254}.
 
 
 
 
 
 
-The ions will predominantly collide with the buffer gas molecules. \autoref{eq:mfp} gives the expression for the kinetic mean free path, \acrshort{mfp}, defined as the average distance travelled between collisions, if the colliding particles are considered hard-spheres \cite{hirschfelder1954molecular}.
+Ions will predominantly collide with  buffer gas molecules. \autoref{eq:mfp} gives the expression for the kinetic mean free path (\acrshort{mfp}, $\lambda$) defined as the average distance travelled between collisions, if the colliding particles are considered hard-spheres \cite{hirschfelder1954molecular}.
 %
 \begin{equation}
     \lambda = \frac{1}{\sqrt{2}N\pi d^2}
 \label{eq:mfp}
 \end{equation}
 %
-N = 2.41$\times$10$^{22}$ m$^{-3}$ at 1 mbar and 300 K and with d, the so-called kinetic diameter, which is 3.64$\times$10$^-{10}$ m for N$_2$ \cite{ismail2015gas}, gives a mean free path of around 70 µm in the reactor, corresponding to a viscous flow.
-If we compare this  with the mass spectrometer, where pressure is around 10$^{-8}$ mbar and N is around 10$^{15}$ m$^{-3}$,  the mean free path grows up to the km order of magnitude, becoming much bigger than the dimensions of the chamber. In this case the flow is molecular and the predominant collisions are no longer with other particles but with the walls of the chamber.
+With d, the so-called kinetic diameter, being  3.64$\times$10$^{-10}$ m for N$_2$ and N = 2.41$\times$10$^{22}$ m$^{-3}$ at 1 mbar and 300 K 
+the mean free path is of around 70 µm in the reactor, which corresponds to a viscous flow \cite{ismail2015gas}.
+%
+This can be compared to the regime in the mass spectrometer, where the pressure is around 10$^{-8}$ mbar and N $\simeq$ 10$^{15}$ m$^{-3}$: the mean free path grows up to the km order of magnitude, becoming much bigger than the dimensions of the chamber. In this case the flow is molecular and the predominant collisions are no longer with other particles but with the walls of the chamber.
 %
 The transition from the viscous to the molecular regime occurs in the differential pumping region.
 
@@ -348,15 +375,8 @@ The transition from the viscous to the molecular regime occurs in the differenti
 
 
 \subsubsection{Radio frequency ion funnel}\label{section:rfif}
-The Radio Frequency Ion Funnel (\acrshort{rfif}) in the reactor of our instrument is a novel piece of equipment developed by KORE Technology Ltd that both delivers extra collisional energy and focuses the ions towards the exit aperture of the drift tube, enhancing both sensitivity and selectivity of the PTR-MS instrument.
-
-As mentioned  earlier, in the second half of the drift tube stack the electrode's diameter gradually decreases from 40 mm to 6 mm in a funnel-like configuration. The suitable electronics to provide these funnel electrodes with an RF field are mounted in the instrument. These electronics
-%consist of a RLC circuit that
-provide the second half of the drift tube's electrodes with a signal of approximately 760 kHz and 200 V peak-to-peak in resonance that we will refer to as RF field (see \autoref{fig:rfif_simion}). At any given time, adjacent funnel plates are supplied with an RF field of opposite polarity. Also, this RF field can be turned on and off in the front panel of the instrument and when it is superimposed to the DC field, which is always on, we say the instrument is operating in RF mode.
-%It is also key to properly tune the capacitance from plate 29 to avoid ``closing'' the funnel.
-Furthermore, in RF mode we do not use the reduced electric field, \textit{E/N}, to refer to the collisional energy as in this mode the electric field is not uniform in the drift tube. A comparison of the ion trajectory  in the second half of the drift tube in DC and RF modes is shown in \autoref{fig:rfif_vs_dc} for ions of \textit{m/z} 19 at a drift voltage of 200 V which corresponds to around 120 Td in DC mode. The funnel effect can be observed on \autoref{fig:rfif_vs_dc}(b) achieving a higher ion density near the exit of the reactor than in DC mode, even though a lower number of ions were flown in RF mode to reduce simulation times because this mode is computationally more demanding than DC mode.
-
-
+The Radio Frequency Ion Funnel (\acrshort{rfif}) in the reactor of our instrument is a novel piece of equipment %developed by KORE Technology Ltd 
+that both delivers extra collisional energy and focuses the ions towards the exit aperture of the drift tube, enhancing both sensitivity and selectivity of the PTR-MS instrument \cite{RF_TNT,barber2012increased}.
 
 \begin{figure}[t]
 \centering
@@ -364,7 +384,15 @@ Furthermore, in RF mode we do not use the reduced electric field, \textit{E/N}, 
 \caption[Potential energy view of the cross section of the reactor in RF mode modelled in SIMION\textsuperscript{\textregistered} with a random DC field.]{Potential energy view of the cross section of the reactor in RF mode modelled in SIMION\textsuperscript{\textregistered} with a random DC field. Contrary to \autoref{fig:dt_simion}, this is a snapshot as the RF field is time-dependent.}
 \label{fig:rfif_simion}
 \end{figure}
-
+%
+%
+As mentioned  earlier, in the second half of the drift tube stack the electrode's diameter gradually decreases from 40 mm to 6 mm in a funnel-like configuration. The suitable electronics to provide these funnel electrodes with an RF field are mounted in the instrument. These electronics
+%consist of a RLC circuit that
+provide the second half of the drift tube's electrodes with a signal of approximately 760 kHz and 200 V peak-to-peak in resonance that we will refer to as RF field (see \autoref{fig:rfif_simion}). At any given time, adjacent funnel plates are supplied with an RF field of opposite polarity. Also, this RF field can be turned on and off in the front panel of the instrument and when it is superimposed to the DC field, which is always on, the instrument is referred to as being operating in RF mode.
+%It is also key to properly tune the capacitance from plate 29 to avoid ``closing'' the funnel.
+Furthermore, in RF mode the reduced electric field, \textit{E/N}, cannot be used to refer to the collisional energy as in this mode the electric field  in the drift tube is no longer uniform. A comparison of the ion trajectories  in the second half of the drift tube in DC and RF modes is shown in \autoref{fig:rfif_vs_dc} for ions of \textit{m/z} 19 at a drift voltage of 200 V, which corresponds to around 120 Td in DC mode. The funnel effect can be observed on \autoref{fig:rfif_vs_dc}b, which reveals a higher ion density near the exit of the reactor than that in DC mode, even though fewer ions were flown in the RF mode simulations %to reduce simulation times 
+because this mode is computationally more demanding than DC mode.
+%
 \begin{figure}[t]
 \centering
 \sidesubfloat[]{\includegraphics[height=0.23\textheight]{pics/DC_simulation_200V_120Td.png}}
@@ -374,30 +402,40 @@ Furthermore, in RF mode we do not use the reduced electric field, \textit{E/N}, 
 \end{figure}
 
 
+The ion funnel configuration described in this section is not the only one used in PTR-MS.
+%
+Others include a short, funnel-like stack of electrodes at the end of the drift tube
+%\cite{piel2019airborne}
+or 
+use a quadrupole enveloping the drift tube
+%a resistive glass drift tube that generates a more uniform electric field than the traditional electrode stack, to which an RF field is superimposed from 
+\cite{piel2019airborne,krechmer2018evaluation}.
 
 
 
-Besides this design from KORE Technology Ltd, there are other  configurations available in the market.
-For instance, the reactor of IONICON Analytik GmbH instruments can include the so-called \textit{ION BOOSTER}, which is a short, funnnel-like stack of electrodes at the end of the drift tube
-\cite{ionbooster}.
-On the other hand, the approach from TOFWERK consists of a resistive glass drift tube that generates a more uniform electric field than the traditional electrode stack, to which an RF field is superimposed from a quadrupole enveloping said drift tube
-\cite{krechmer2018evaluation}.
+%Besides this design from KORE Technology Ltd, there are other  configurations available in the market.
+%For instance, the reactor of IONICON Analytik GmbH instruments can include the so-called \textit{ION BOOSTER}, which is a short, funnel-like stack of electrodes at the end of the drift tube \cite{ionbooster}.
+%On the other hand, the approach from TOFWERK consists of a resistive glass drift tube that generates a more uniform electric field than the traditional electrode stack, to which an RF field is superimposed from a quadrupole enveloping said drift tube \cite{krechmer2018evaluation}.
 
 
 \subsubsection{Fast reduced electric field  switching}\label{section:fs}
-Besides the \acrshort{rfif}, another of the recent hardware developments from KORE Technology Ltd, this time in conjunction with the \acrfull{dstl}, is the fast reduced electric field switching, or just fast switching.
-It consists of a  programmable 500 V power supply unit that can quickly switch at a chosen frequency between two preselected PTR Entry voltages  in the range from 50 V to 450 V, which corresponds  to roughly the interval from 10 Td to 250 Td.  This unit can be retrofitted into any other PTR-ToF-MS instrument from the same manufacturer.
-This technology has been applied to the detection of explosives \cite{doi:10.1021/acs.analchem.7b05211}.
+Besides the \acrshort{rfif}, another one of the recent hardware developments %from KORE Technology Ltd, this time in conjunction with the \acrfull{dstl}, 
+is the fast reduced electric field switching, or just fast switching.
+%
+It consists of a programmable 500 V power supply unit that can quickly switch the PTR Entry voltage between two preselected values in the range from 50 V to 450 V, which corresponds  to roughly the interval from 10 Td to 250 Td, at a chosen frequency.  This unit can be retrofitted into any other PTR-ToF-MS  from the same manufacturer.
+This development has been applied to the detection of different explosives by \citeauthor{doi:10.1021/acs.analchem.7b05211} \cite{doi:10.1021/acs.analchem.7b05211}.
 %demonstrated applicable to the detection of explosives %by \citeauthor{doi:10.1021/acs.analchem.7b05211}
 
 
-A previous \textit{E/N} study of the molecule is needed to identify  the characteristic product ions beforehand. Then the two relevant PTR Entry voltage (\textit{E/N}) values and the switching frequency are selected.
-The lower limit of the switching frequency, while achieving optimal analytical results, is around 1 Hz.
-This limit is a consequence of the time the reactor takes to clear out from product ions at a different reduced electric field, the so-called ``capacitance'', which is typically of around 150-200 ms.
-The rise and fall times of the voltages given by the power supply unit are not symmetrical, but as these are tens of milliseconds, these get masked out by the capacitance.
+A previous \textit{E/N} study of the molecule is needed to identify  the characteristic product ions beforehand. Then the two relevant PTR Entry voltage (i.e. \textit{E/N}) values and the switching frequency are selected.
+The lower limit of the switching frequency, while still achieving optimal analytical results, is around 1 Hz.
+This limit is a consequence of the time the reactor takes to clear out from product ions at a given reduced electric field, the so-called ``capacitance'', which is typically of around 150 - 200 ms.
+The rise and fall times of the voltages given by the power supply unit are not symmetrical, but as these are tens of milliseconds, they get masked out by the capacitance.
 %The data obtained  this way is stored in a .lst file
-A temporal spacing of 25 ms has been found to give the best temporal resolution and  also proper data analysis is needed in order to discard the data acquired during the voltage changes.
-This is done by means of a script I wrote in Matlab\textsuperscript{\textregistered}, which is described in detail in  section \ref{sec:fs_data}.
+A temporal resolution of 25 ms has been found to be the optimum value %give the best results 
+and  also proper data analysis is needed in order to discard the data acquired during the voltage changes.
+This is done by means of a script %I wrote in Matlab\textsuperscript{\textregistered}, which is 
+described in detail in  section \ref{sec:fs_data}.
 
 
 
@@ -412,15 +450,25 @@ This is done by means of a script I wrote in Matlab\textsuperscript{\textregiste
 
 
 \subsection{Differential pumping region and transfer lenses}
-When the ions leave the drift tube through the exit plate's orifice, which has a diameter of 400 µm, they enter the differential pumping region, where the transfer lenses are. There is a pressure drop from the 1 mbar range in the drift tube to the 10$^{-4}$ mbar range in the differential pumping stage. This translates into a change in the type of flow, from viscous flow in the drift tube to a molecular flow in the transfer lenses region and further downstream in the mass analyser. This means that the mean free path of the ions gets bigger than the dimensions of the chamber,
+When the ions leave the drift tube through the exit plate's orifice, which has a diameter of 400 µm, they enter the differential pumping region, where the transfer lenses are. There is a pressure drop from the 1 mbar range in the drift tube to the 10$^{-4}$ mbar range in the differential pumping stage. This translates into a change in the type of flow, from viscous flow in the drift tube to a molecular flow in the transfer lenses region and further downstream in the mass analyser, 
+with %. This means that 
+the mean free path of the ions gets bigger than the dimensions of the chamber,
 %up to tens or hundreds of meters,
-and thus ion-wall collisions are predominant over ion-neutral or ion-ion collisions.
+and thus ion-wall collisions are predominant over ion-neutral %or ion-ion 
+%collisions.
+ones.
 
-The aim of the transfer lenses is to focus the ion beam and transport it to the mass spectrometer. For this purpose, the ion beam is driven through a set of ring electrodes at different voltages. These ion optics focus the ions in the centre of a pinhole in the same way optical lenses do with light. The pinhole helps to clean the beam from chromatic aberrations, which translates into narrower peaks in the mass spectra because the ion beam that reaches the mass analyser is less spatially spread out
+The role of the transfer lenses is to focus the ion beam and transport it to the mass spectrometer as effectively as possible. For this purpose, the ion beam is driven through a set of ring electrodes at different voltages. These ion optics focus the ions in the centre of a pinhole in the same way optical lenses do with light. The pinhole helps to clean the beam from chromatic aberrations, which translates into narrower peaks in the mass spectra because the ion beam that reaches the mass analyser is less spatially spread out.
 This is qualitatively illustrated in \autoref{fig:tl_simion}.
-Also, two pairs of deflectors (not included in \autoref{fig:tl_simion}) can be tuned to steer the beam to maximise the transmission into the mass spectrometer.
+Also, two pairs of deflectors (not included in \autoref{fig:tl_simion}) can be tuned to steer the beam to maximise the transmission into the mass spectrometer region.
 
-It is important to note that a high potential gradient between exit plate and the first transfer optics electrode can help to increase the transmission but can create a hard extraction of ions. In the case of a hard extraction, ions are uncontrollably being fragmented beyond the exit plate in the early stages of the transfer optics, where the density of ions is still high. This undesired fragmentation can be avoided by setting  the electric field between the exit plate and the first electrode in the transfer optics to no more than a few V/cm. In a series of experiments not included in this thesis, Renaud R. Dassonville and I made sure that in the standard operating conditions of our PTR-MS instruments hard extraction was not occurring. This was checked by monitoring the product ions from n-butylbenzene at different extraction and transfer lenses voltages.
+%It is important to note that 
+A high potential gradient between exit plate and the first transfer optics electrode can help to increase the transmission but can create a hard extraction of ions, % In the case of a hard extraction, 
+ uncontrollably increasing ions fragmentation beyond the exit plate in the early stages of the transfer optics, where the density of ions is still high. This undesired fragmentation can be avoided by setting  the electric field between the exit plate and the first electrode in the transfer optics to no more than a few V/cm. 
+ %
+ This phenomenon was investigated by Renaud R. Dassonville and I in a series of experiments not included in this thesis that consisted in monitoring the product ions from n-butylbenzene at different extraction and transfer lenses voltages.
+ 
+ %In a series of experiments not included in this thesis, Renaud R. Dassonville and I made sure that in the standard operating conditions of our PTR-MS instruments hard extraction was not occurring. This was checked by monitoring the product ions from n-butylbenzene at different extraction and transfer lenses voltages.
 
 \begin{figure}%[ht]
 \centering
@@ -432,17 +480,18 @@ It is important to note that a high potential gradient between exit plate and th
 
 
 \subsection{Mass spectrometer}
-The ion beam is transferred from the drift tube to the mass spectrometer (\acrshort{ms}) via the transfer optics. The MS detects the ions according to their mass-to-charge ratio and allocate them in a histogram-like plot called spectrum. This  requires a vacuum pressure in the flight tube of less than 10$^{-7}$ mbar. I will indistinctly refer to mass spectrometer and mass analyser.
+The ion beam is transferred from the drift tube to the mass spectrometer (\acrshort{ms}) via the transfer optics. The MS detects the ions according to their mass-to-charge ratio and allocate them in a histogram-like plot mass spectrum.  The terms mass spectrometer and mass analyser will be used interchangeably.
 
-The mass-to-charge ratio is abbreviated to \textit{\acrshort{mz}} and it refers to the ratio of the ions' mass divided by their charge. SI units are not used for the \textit{m/z}. For simplicity, atomic mass units (\acrshort{amu}) are used for the mass (1 amu = 1.66$\times$10$^{-27}$ kg) and the number of fundamental electric charges are used for the charge (1 e = 1.60$\times$10$^{-19}$ C). Depending on the mass resolution of the MS, \textit{m/z}  can be given as an integer (nominal mass) or as a real number (monoisotopic mass).
+The mass-to-charge ratio is abbreviated to \textit{\acrshort{mz}} and it refers to the ratio of the ions' mass divided by their charge. SI units are not used for the \textit{m/z}. For simplicity, atomic mass units (\acrshort{amu}) are used for the mass (1 amu = 1.66$\times$10$^{-27}$ kg) and the number of fundamental electric charges for the charge (1 e = 1.60$\times$10$^{-19}$ C). 
+%Depending on the mass resolution of the MS, \textit{m/z}  is given as an integer (nominal mass) or as a real number (monoisotopic mass).
 
 \subsubsection{Time-of-flight mass spectrometer}
-The time-of-flight mass spectrometers  (\acrshort{tofms}, \autoref{fig:tof})  are  the most widely mass spectrometers used in PTR-MS.
+The time-of-flight mass spectrometers  (\acrshort{tofms}, \autoref{fig:tof})  are  the most widely mass spectrometers used in PTR-MS. 
+%
+Their operating pressure is of 10$^{-7}$ mbar or less.
 
-A ToF-MS works as follows: when ions reach the entrance of the MS (pulser region), a pulsed (tens of kHz) high voltage V of some kilovolts orthogonally repels them towards the other end of the flight tube. Lighter ions will gain more speed than heavier ions, which means that they will reach the detector faster. The time it takes an ion to reach the detector and its \textit{m/z} are related by \autoref{eq:tof2}, which comes from the energy balance in \autoref{eq:tof1}.
-
-
-
+A ToF-MS works as follows: when ions reach the entrance of the MS (pulser region), a pulsed (tens of kHz) high voltage V of some kilovolts orthogonally repels them towards the other end of the flight tube. Lighter ions will gain more speed than heavier ions, which means that they will reach the detector faster. The time it takes an ion to reach the detector and its \textit{m/z} are related through \autoref{eq:tof2}, which comes from the energy balance in \autoref{eq:tof1}:
+%
 \begin{equation}
 \label{eq:tof1}
 qV =  \frac{1}{2} m\left(\frac{l}{t}\right)^2
@@ -467,9 +516,11 @@ This allows to calculate the \textit{m/z} of the ions as they are being collecte
 
 
 \subsubsection{Reflectron}
-A spatially spread distribution of ions of the same \textit{m/z} in the pulser region can result in different ion velocities, and hence being detected at different times. This translates into broaden peaks in the mass spectrum. To amend this a reflectron can be implemented in the flight tube of a ToF-MS.
+A spatially spread distribution of ions of the same \textit{m/z} in the pulser region can result in different ion velocities, and hence being detected at different times, broadening the mass spectrum peaks.
+%
+To amend this a reflectron can be implemented in the flight tube of a ToF-MS.
 
-A diagram showing how a reflectron works is shown in \autoref{fig:tofr}. It basically consists of a series of electrodes with increasing voltage that will reverse the trajectory of the ions. When a cloud of ions reaches the reflectron, ions of the same \textit{m/z} but going faster go deeper in it, having a longer flight distance than slower ions. This way, slow and fast ions of the same \textit{m/z} will reach the detector at the same time, having travelled different distances, yielding narrower peaks and  improved mass resolution when the mass spectrum is built.
+A diagram showing how a reflectron works is provided in \autoref{fig:tofr}. It basically consists of a series of electrodes with increasing voltage that will reverse the trajectory of the ions. When a cloud of ions reaches the reflectron, ions of the same \textit{m/z} but going faster go deeper in it, having a longer flight distance than slower ions. This way, slow and fast ions of the same \textit{m/z} will reach the detector at the same time, having travelled different distances, yielding narrower peaks and  improved mass resolution. % when the mass spectrum is built.
 
 \begin{figure}%[ht]
 \centering
@@ -514,9 +565,14 @@ Incoming ions are accelerated to $\sim$2 kV before they hit the MCPs' walls. Sai
 
 
 \subsubsection{Calibration}
-As any other scientific instrument, the PTR-ToF-MS must be calibrated before performing any experiment. Note that in this section we refer to calibration as the method to calculate the mass conversions parameters, not the calibration to calculate a concentration from a signal in counts per second. The mass conversions parameters can be calculated by selecting some reference peaks and assigning them their exact \textit{m/z}.
-Some peaks that can be used to calibrate the instruments are the $^{18}$O isotope of hydronium (H$_3^{18}$O$^+$, \textit{m/z} 21.023), NO$^{+}$ (m/z 29.998) and  NO$_2^{+}$ (m/z 45.993). It is also useful to use the analyte ion that will be measured as a calibration peak and other peaks resulting from compounds present in air, like protonated acetone ((C$_3$H$_6$O)H$^+$, \textit{m/z} 59.050).  The TDC uses \autoref{eq:cal} for this task doing a least squares fitting.
-
+As any other scientific instrument, the PTR-ToF-MS must be calibrated before performing any experiment. Note that  this section  refers to calibration as the method to calculate the mass conversions parameters, not the calibration to calculate a concentration from an ion signal. The mass conversions parameters can be calculated by selecting some reference peaks and assigning them their exact \textit{m/z}.
+Some peaks that can be used to calibrate the instruments are the $^{18}$O isotope of hydronium (H$_3^{18}$O$^+$, \textit{m/z} 21.023), NO$^{+}$ (m/z 29.998) and  NO$_2^{+}$ (m/z 45.993). 
+%
+It is also useful to include peaks from the larger end of the mass spectrum (i.e. \textit{m/z} >200). If a single analyte is being studied (i.e. not a mixture), its protonated parent ion can be used.
+%It is also useful to use the analyte ion that will be measured as a calibration peak and other peaks resulting from compounds present in air, like protonated acetone ((C$_3$H$_6$O)H$^+$, \textit{m/z} 59.050).
+%
+The TDC uses \autoref{eq:cal} for this task doing a least squares fitting:
+%
 \begin{equation}
 \label{eq:cal}
 m\slash z =  \left(\frac{t-t_0}{C_b}\right)^2
@@ -525,7 +581,7 @@ where \textit{m/z} is the mass-to-charge ratio, t is the ion's time-of-flight, a
 
 
 
-\section{Data analysis}
+\section{Data post-processing and computational methods}
 %In this section I explain how the post-processing of the data is done.
 
 
@@ -536,20 +592,22 @@ where \textit{m/z} is the mass-to-charge ratio, t is the ion's time-of-flight, a
 
 \subsection{Data acquisition, visualisation and treatment}
 
-The analogue data acquired by the PTR-ToF-MS is translated into digital files by the time-to-digital converter (\acrshort{tdc}) to be visualised and analysed  with the proper software. An experiment can consist in either a static measurement, yielding a stable signal throughout the experiment, or a transient measurement, where the ion counts are time-dependent. These different types of experiments are usually acquired as a mass spectrum  in the form of a Galactic .spc  file from Thermo Fisher Scientific\textsuperscript{\textregistered}, or as a temporal evolution of the mass spectrum, in the form of a .lst file, respectively.
+The analogue data acquired by the PTR-ToF-MS is translated into digital files by \acrshort{tdc} to be visualised and analysed  with the proper software. An experiment can consist in either a static measurement, yielding a stable signal throughout the experiment, or a transient measurement, where the ion signals are time-dependent. These different types of experiments are usually acquired as a mass spectrum  in the form of a Galactic .spc  file from Thermo Fisher Scientific\textsuperscript{\textregistered}, or as a temporal evolution of the mass spectrum, in the form of a binary .lst file, respectively.
 
 As mentioned earlier, a mass spectrum is the histogram-like plot of the counts of detected ions as a function of their \textit{m/z} which, in our case, is stored in .spc files.
-\autoref{fig:grams}(a) shows an example of a mass spectrum visualised with the Thermo Fisher Scientific\textsuperscript{\textregistered}  GRAMS/AI\textsuperscript{TM}  Spectroscopy Software, which is adapted by KORE Technology Ltd to be used with their equipment.
+\autoref{fig:grams}a shows an example of a mass spectrum visualised with the Thermo Fisher Scientific\textsuperscript{\textregistered}  GRAMS/AI\textsuperscript{TM}  Spectroscopy Software, which is adapted by KORE Technology Ltd to be used with their equipment.
 The software does the time to \textit{m/z} conversion following \autoref{eq:cal}.
 
 
-On the other hand, the transient experiments are stored in %raw files called
+Transient experiments are stored in %raw files called
 .lst files.
  These %are binary
- files  record the timestamp (in microseconds) of each event in three consecutive bytes in hexadecimal notation, with the most significant byte first, and they are accompanied by a text file containing information about the experiment (.ini file).
+ files  record the timestamp in microseconds of each event in three consecutive bytes in hexadecimal notation, with the most significant byte first, and they are accompanied by a text  (.ini) file containing information about the experiment.
 An event can be either the start of a cycle in the detector, always indicated by 0x000000 (i.e. t = 0 µs), or a detected ion (for instance, an ion detected at t = 12500 µs would be recorded as 0x0030D4).
- This means that an .lst file holds all the information about the experiment and can be plotted as both a cumulative mass spectrum as a function of the \textit{m/z} or as a transient experiment as a function of the experiment time.
-The software GRAMS/AI\textsuperscript{TM} allows to open the .lst files as a mass spectrum, like that in \autoref{fig:grams}(a), or as the time-evolution of some particular \textit{m/z}, as shown in \autoref{fig:grams}(b). For the latter plot, the so-called regions of interest (ROI) must be selected before starting the experiment, by selecting the left and right ends of intervals of interest whose ion count will be integrated, displayed and updated as the data is acquired.
+ Therefore an .lst file holds all the information about the experiment and can be plotted as either a cumulative mass spectrum as a function of the \textit{m/z} or as a transient of selected ion signals as a function of the experiment time.
+The software GRAMS/AI\textsuperscript{TM} allows to open the .lst files as a mass spectrum, like that in \autoref{fig:grams}a, or as the time-evolution of some particular \textit{m/z}, as shown in \autoref{fig:grams}b. For the latter plot, the so-called regions of interest must be selected before starting the experiment 
+to display targeted ion signals. 
+%, by selecting the left and right ends of intervals of interest whose ion count will be integrated, displayed and updated as the data is acquired.
 %This is  useful in conjunction with the TDU, as it will be explained in the .................... %results section.
 
 %advantage: real time monitoring as the data is recorded
@@ -567,11 +625,17 @@ The software GRAMS/AI\textsuperscript{TM} allows to open the .lst files as a mas
 
 
 
-%\subsection{Code for data analysis}
- With a PTR-MS instrument, a lot of data can be acquired quite quickly so basic programming knowledge comes in handy when dealing with these big datasets.
- One of the best options is to use the Matlab\textsuperscript{\textregistered} command \textit{tgspcread()}, which reads  Galactic .spc files from Thermo Fisher Scientific\textsuperscript{\textregistered}. This imports all the fields in the datafile into an object-oriented data type called \textit{struct}, which allows quick and easy extraction and manipulation of large amounts of data.
+Additionally, the Matlab\textsuperscript{\textregistered} command \textit{tgspcread()} is compatible with  Galactic .spc files from Thermo Fisher Scientific\textsuperscript{\textregistered}.
+%
+This command imports all the fields in the data file into an object-oriented data type called \textit{struct}, which allows quick and easy extraction and manipulation of large amounts of data.
  In the case of the .lst files, the extraction of the data has to be done without help from any library. It is a bit more tedious, as it requires reading the hexadecimal file, building the mass spectra using the parameters stored in the .ini file, do the time-mass conversion and  extract the \textit{m/z} of interest for transient experiments.
- Using this  as starting point, I wrote my own code to do the data analysis. It extracts all the data from a whole study or experiment to analyse it in Matlab\textsuperscript{\textregistered}, measuring peak positions using the FWHM of the peaks, calculating peak intensities, extracting transient data, subtracting background signals and assigning possible chemical compositions.
+ 
+
+
+% With a PTR-MS instrument, a lot of data can be acquired quite quickly so basic programming knowledge comes in handy when dealing with these big data sets.
+% One of the best options is to use the Matlab\textsuperscript{\textregistered} command \textit{tgspcread()}, which reads  Galactic .spc files from Thermo Fisher Scientific\textsuperscript{\textregistered}. This imports all the fields in the data file into an object-oriented data type called \textit{struct}, which allows quick and easy extraction and manipulation of large amounts of data.
+% In the case of the .lst files, the extraction of the data has to be done without help from any library. It is a bit more tedious, as it requires reading the hexadecimal file, building the mass spectra using the parameters stored in the .ini file, do the time-mass conversion and  extract the \textit{m/z} of interest for transient experiments.
+% Using this  as starting point, I wrote my own code to do the data analysis. It extracts all the data from a whole study or experiment to analyse it in Matlab\textsuperscript{\textregistered}, measuring peak positions using the FWHM of the peaks, calculating peak intensities, extracting transient data, subtracting background signals and assigning possible chemical compositions.
 
 
 
@@ -589,7 +653,8 @@ In this case, the 60\% saturation limit would be at an ion signal of $\sim$16666
 %Dead time...........
 
 Peak saturation situations should be avoided when it occurs at product ion peaks, as it can carry other effects like reagent ion depletion.
-However, in some scenarios they can be worked around by calculating the ion intensities using the suitable isotopes in each case.
+However, saturation is commonly observed for the reagent ion peaks, whose intensities can be calculated using the suitable isotopes in each case.
+%in some scenarios they can be worked around by calculating the ion intensities using the suitable isotopes in each case.
 The $^{18}$O isotope peak is used to calculate the reagent ion intensities of  H$_3$O$^+$ or O$_2^+$ as their more abundant $^{16}$O peak is often saturated.
 The natural composition of oxygen is $^{16}$O (99.76\%), $^{17}$O (0.03\%) and $^{18}$O (0.21\%) \cite{nistoxygen}.
 %This applies to the three most used reagent ions in \acrshort{scims}.
@@ -598,12 +663,23 @@ However, for NO$^+$ it is better to use the $^{15}$NO$^+$ at \textit{m/z} 30.995
 
 The $^{13}$C isotope is often used to calculate product ion intensities in saturated peaks and to verify composition assignments if the mass resolution is not enough to distinguish between isobaric compounds.
 It is the second most abundant isotope (1.07\%) after  $^{12}$C (98.93\%), with  $^{14}$C is only present at 1 ppt \cite{nistcarbon}.
-$^{13}$C is obviously more useful with bigger molecules because normally the bigger the molecule, the more carbons it will have, yielding an intensity of more than 10\% at \textit{(m+1)/z} of that at \textit{m/z} for molecules with ten or more carbon atoms.
-Of special interest are as well the halogenated compounds containing Cl or Br, which produce  very characteristic isotopic  peaks. $^{35}$Cl and $^{37}$Cl are naturally present at abundances of 75.76\% and 24.24\%, while for $^{79}$Br and $^{81}$Br these are 50.69\% and 49.31\%, respectively \cite{nistcl,nistbr}.
-Thus, Cl-containing compounds shows a pattern of ratios ca. 3:1 at  \textit{m/z} and \textit{(m+2)/z}, while for Cl$_2$ this is 9:6:1 at  \textit{m/z}, \textit{(m+2)/z} and \textit{(m+4)/z}. For Br this is approximately 1:1 at  \textit{m/z} and \textit{(m+2)/z} and for Br$_2$ it is 1:2:1 at \textit{m/z}, \textit{(m+2)/z} and \textit{(m+4)/z}.
+$^{13}$C is obviously more useful with bigger molecules because normally the bigger the molecule, the more carbons it will have, yielding a peak intensity of more than 10\% at %\textit{(m+1)/z} 
+\textit{m/z} + 1 of that at \textit{m/z} for molecules with ten or more carbon atoms.
+Of special interest are as well the halogenated compounds containing Cl or Br, which show  very characteristic isotopic  peaks. $^{35}$Cl and $^{37}$Cl are naturally present at abundances of 75.76\% and 24.24\%, while for $^{79}$Br and $^{81}$Br these are 50.69\% and 49.31\%, respectively \cite{nistcl,nistbr}.
+Thus,  molecules containing a single Cl atom show a pattern of peaks whose intensity is ca. 3:1 at  \textit{m/z} and %\textit{(m+2)/z}
+\textit{m/z} + 2, while for molecules with two Cl atoms this is 9:6:1 at  \textit{m/z}, %\textit{(m+2)/z}
+\textit{m/z} + 2 and %\textit{(m+4)/z}
+\textit{m/z} + 4. 
+For  molecules with a single Br this is approximately 1:1 at  \textit{m/z} and %\textit{(m+2)/z}
+\textit{m/z} + 2 while for two Br atoms it is 1:2:1 at \textit{m/z}, %\textit{(m+2)/z}
+\textit{m/z} + 2 and %\textit{(m+4)/z}
+\textit{m/z} + 4.
 
 With these considerations in mind, for the rest of this thesis when an ion's \textit{m/z} is given with a chemical composition, it will refer to the most abundant isotopologue.
-It is also quite common to show the ion signal in normalised counts per second, \acrshort{ncps}, by normalising the ion signals to 10$^6$ counts of reagent ion signal. For this, the proton affinity of the analyte must be known because proton transfer from the water clusters can also occur and their ion signal must be considered when calculating the ncps. However, in most of this thesis  the data is shown in raw cps to ease the comparison with other instruments, after being usually repeated two times and subtracted the background signal.
+%It is also quite common to show the ion signal in normalised counts per second (\acrshort{ncps}) by normalising the ion signals to 10$^6$ counts of reagent ion signal. For this, the proton affinity of the analyte must be known because proton transfer from the water clusters can also occur and their ion signal must be considered when calculating the ncps. However, in most of this thesis  the data is shown in raw cps to ease the comparison with other instruments, after being usually repeated two times and subtracted the background signal.
+In  this thesis  the data is either given in branching percentages (also referred to as branching ratios, BR, or product ion distributions, PID) 
+or in raw counts per second, %cps to ease the comparison with other instruments,
+after being  repeated two times, averaged and background subtracted.
 
 
 
@@ -662,12 +738,13 @@ It is also quite common to show the ion signal in normalised counts per second, 
 
 
 \subsection{Fast switching software}\label{sec:fs_data}
-Analysing data from fast switching experiments can be tedious if needed to be done working manually with each file. %file by file.
+Analysing data from fast switching experiments can be tedious if needed to be done  manually file by file.
 %
-For this, and knowing already how to work with the experiment files, it was useful to write a script in Matlab\textsuperscript{\textregistered}  together with a graphical user interface to analyse the data in a quicker way.
+For this purpose, %and knowing already how to work with the experiment files, 
+it was useful to write a script in Matlab\textsuperscript{\textregistered}  including  a graphical user interface to analyse the data in a quicker way.
 %
 This interface is shown in \autoref{fig:fss}.
-It basically imports the suitable files, opens the cumulative mass spectrum to select the regions of interest, calculates and plots the ion intensities splitting the data in frames, and exports to an excel file in both counts per second and percentage together with the experiment time and the \textit{E/N}.
+It basically imports the suitable files, opens the cumulative mass spectrum to select the regions of interest, calculates and plots the ion intensities splitting the data in frames (i.e. each of the time intervals in which the drift tube is kept at the same \textit{E/N}), and exports the data to an excel file in both counts per second and branching ratios together with the experiment time and the \textit{E/N}.
 %
 Note that different colours are used in the raw and averaged data to ease the visualisation.
 
@@ -682,7 +759,7 @@ Note that different colours are used in the raw and averaged data to ease the vi
 \label{fig:fss}
 \end{figure}
 
-The files that this script imports are the .lst ones and its accompanying .ini files, which contain the information of the fast switching experiment that is necessary to work with the data.
+The files that this script imports are the .lst ones and their accompanying .ini files, which contain the information of the fast switching experiment that is necessary to work with the data.
 This  comprehends, among other parameters,
 the number of phases,
 the number of cycles per phase,
@@ -698,10 +775,11 @@ The fast switching frequency is not explicitly recorded but it is given by the i
 The total length of the experiment is not recorded either but, similarly to the switching frequency, it can be calculated by multiplying the cycle period by the total number of cycles. For example, a cycle period of 40 µs and 1.5$\times$10$^6$ total cycles corresponds to a 1 minute experiment.
 %
 %
-Each of the time intervals in which the drift tube is kept at the same \textit{E/N} is called a frame. In a measurement lasting 60 seconds at a fast switching frequency of 1 Hz there are 60 total frames and 30 frames per phase.
+%Each of the time intervals in which the drift tube is kept at the same \textit{E/N} is called a frame. 
+In a measurement lasting 60 seconds at a fast switching frequency of 1 Hz there are 60 total frames and 30 frames per phase.
 %
 %
-The dead time recorded in the .ini file in this case refers to that given by the delay in the electronics to supply the right voltage to the drift tube, i.e. the rise and fall times, and it is around 70 ms. The software automatically ignores the interval three times bigger than this dead time to account for the capacitance of the reactor, which was explained  in section \ref{section:rfif}.
+The dead time recorded in the .ini file in this case refers to that given by the delay in the electronics to supply the right voltage to the drift tube (i.e. the rise and fall times) and it is around 70 ms. The software automatically ignores the interval three times bigger than this dead time to account for the capacitance of the reactor, which was explained  in section \ref{section:fs}.
 %Phases = 2
 %Frames = 30
 %Cycle period us=40
@@ -714,10 +792,10 @@ The dead time recorded in the .ini file in this case refers to that given by the
 
 
 
-If the name of the files when doing the experiment is recorded is set to [\textit{low E/N}]-[\textit{high E/N}]-[\textit{file number}], the script automatically reads and writes in the output file the values of the low and high \textit{E/N}. If not, they must be manually added.
+If the files are saved with the name format [\textit{low E/N}]-[\textit{high E/N}]-[\textit{file number}], the script automatically reads and writes in the output file the values of the low and high \textit{E/N}. If not, they must be manually added.
 %
 The data inside each frame can be exported in raw format or averaged.
-For steady experiments like the one shown in \autoref{fig:fss}(a), the data from all the frames from a phase (i.e. high or low \textit{E/N}) can also be averaged like it is shown in this figure. Obviously, this does not make sense for transient measurements like that in \autoref{fig:fss}(b).
+For steady experiments like the one shown in \autoref{fig:fss}a, the data from all the frames from a phase (i.e. high or low \textit{E/N}) can also be averaged like it is shown in this figure. Obviously, this does not make sense for transient measurements like that in \autoref{fig:fss}b.
 %
 Once the data analysis is finished, the results can be exported. The format these files are saved at allows easy double-y axis plot of the ion intensities and \textit{E/N} as a function of the experiment time, as it is shown in \autoref{fig:fss_plots}, for a (a,c) steady-state  and (b,d) transient measurement.
 
@@ -737,9 +815,9 @@ Once the data analysis is finished, the results can be exported. The format thes
 
 
 \subsection{Density functional theory}
-Experimental data in this thesis is often provided including theoretical values of the proton affinity, gas-phase basicity and energetics of the protonation and/or fragmentation reactions.
-These theoretical values were computed using density functional theory (\acrshort{dft}) by Dr Peter Watts (unless otherwise stated). 
-Gaussian09W and GaussView05 for Windows were used for this purpose \cite{frisch2009gaussian} and the B3LYP functional with the 6-31+G(d,p) basis set were used.
+Experimental data in this thesis is in some cases accompanied by theoretical values of the proton affinity, gas-phase basicity and energetics of the protonation and/or fragmentation reactions.
+These density functional theory (\acrshort{dft}) results were computed   by Dr Peter Watts using  
+Gaussian09W and GaussView05 for Windows  and the B3LYP functional with the 6-31+G(d,p) basis set  \cite{frisch2009gaussian}.
 
 %\subsubsection{Saturation: Poisson distribution}
 
@@ -770,38 +848,39 @@ Gaussian09W and GaussView05 for Windows were used for this purpose \cite{frisch2
 \section{PTR-MS Add-ons}
 %\section{PTR-MS add-ons and latest hardware developments}
 Besides the essential components described  earlier in this chapter, there are some accessories that can be coupled to a PTR-MS instrument for different purposes.
-There are many interesting devices available in the market, like the CHARON real-time aerosol inlet \cite{muller2017direct,piel2019airborne} or the PREFICS pre concentrator with chromatographic separation \cite{prefics}.
-The ones explained in this section are the ones used for the experimental work included in this thesis.
+These include devices  like the CHARON real-time aerosol inlet  or the PREFICS pre concentrator with chromatographic separation \cite{muller2017direct,piel2019airborne,prefics}.
+The ones included in this section are those used at some point for the experimental work in this thesis.
 
 
 
 
 \subsection{Thermal Desorption Unit}\label{section:tdu}
-For many applications, PTR-MS has been demonstrated to be a sensitive tool, yet the primary method in homeland security is \acrshort{ims}.
+For many applications, PTR-MS has been demonstrated to be a sensitive tool, yet the primary method for homeland security applications is \acrshort{ims}.
 %
-Most substances of concern in this sector, including drugs and explosives, as well as in other fields have a small vapour pressure at room temperature, which challenges their identification. These are often referred to as semi-volatile organic compounds (\acrshort{svoc}s).
+Most substances of relevance in this sector, including drugs and explosives, as well as in other fields have a small vapour pressure at room temperature, which challenges their identification. These are often referred to as semi-volatile organic compounds (\acrshort{svoc}s).
 %
-The sampling method is then critical in the detection of these traces.
+The sampling method is then critical in the detection of traces ammounts of these substances.
 
 
-This issue has been addressed in many interesting ways.
+This issue has been approached in many interesting ways.
 %
-For instance, patents for hand-held suction systems capable of identifying small quantities of explosives were granted to \citeauthor{conrad1992hand} and \citeauthor{carroll1992hand} \cite{conrad1992hand,carroll1992hand}.
+These include the patents for hand-held suction systems capable of identifying small quantities of explosives that were granted to \citeauthor{conrad1992hand} and to \citeauthor{carroll1992hand} \cite{conrad1992hand,carroll1992hand}.
 %
 \citeauthor{jjunju2015hand} also created a portable tool to detect nitroaromatic explosives on-site via atmospheric pressure chemical ionisation that can operate for 12 h in one charge \cite{jjunju2015hand}.
 %
-Additionally, the development of a biomimetic electronic dog's nose by \citeauthor{staymates2016biomimetic} is a exciting new approach \cite{staymates2016biomimetic}.
-%Similar aproaches to that mentioned here are taken by \citeauthor{ebejer2005rapid} \cite{ebejer2005rapid}
+Additionally, the development of a biomimetic electronic dog nose by \citeauthor{staymates2016biomimetic} is an exciting new development \cite{staymates2016biomimetic}.
+%Similar approaches to that mentioned here are taken by \citeauthor{ebejer2005rapid} \cite{ebejer2005rapid}
 
 
 
 Swab desorptions are commonly used in  IMS  and the same approach can be brought into PTR-MS.
 %
-KORE Technology Ltd has created a thermal desorption unit (\acrshort{tdu}, \autoref{fig:tdu}) which can be used to study SVOCs together with a PTR-MS device.
+A thermal desorption unit (\acrshort{tdu})  like that engineered by KORE Technology Ltd  can be used to study SVOCs when coupled to a PTR-MS device (\autoref{fig:tdu}).
 %
-This was used to study the detection of explosives reaching limits of detection (\acrshort{lod}) of nanograms \cite{RN445} and to analyse polyaromatic hydrocarbons \cite{blenkhorn2019novel}.
+This was applied by \citeauthor{RN445} to the detection of explosives %reaching limits of detection (\acrshort{lod}) of nanograms  
+and by \citeauthor{blenkhorn2019novel} to the detection polyaromatic hydrocarbons \cite{RN445,blenkhorn2019novel}.
 %
-The TDU works with polytetrafluoroethylene (\acrshort{ptfe}) swabs (ThermoFisher Scientific, Cheshire, UK) mounted in a cardboard frame (shown in \autoref{fig:tdu}(a)) onto which the targeted compounds are deposited.
+This TDU works with polytetrafluoroethylene (\acrshort{ptfe}) swabs (ThermoFisher Scientific, Cheshire, UK) mounted in a cardboard frame (shown in \autoref{fig:tdu}a) onto which the targeted compounds are deposited.
 %
 Then, the swab is inserted in the TDU, whose plates come together clamping the swab and creating a high-quality circular seal. The metal plates are kept at high temperature (150$^{\circ}$C) and a carrier gas is flown through their holes, pulling the analyte towards the inlet pipe, whose surfaces are passivated (treated with SilcoNert\textsuperscript{\textregistered} 2000) to minimise adsorption.
 %
@@ -833,33 +912,35 @@ It usually takes between 60 and 120 seconds for a sample to be completely desorb
 
 
 \subsection{FastGC}\label{section:fastgc}
-The fastGC (IONICON Analytik GmbH, Austria) is an add-on that can be used to aid in the product ion identification process separating the analyte molecule from possible contaminants and impurities.
+
+The fastGC (IONICON Analytik GmbH, Austria) is an add-on that aids in the product ion identification process by separating the analyte molecule from possible contaminants and impurities.
 
 The working principle of the fastGC is the same as that of gas chromatography (\acrshort{gc}) systems, where
 %
-the components of a  gas mixture (mobile phase) present different retention times when flowing through a liquid or solid (stationary phase) packed inside a capillary column, which temporarily separates them.
+the components of a  gas mixture (mobile phase) present different retention times when flowing through a liquid or solid (stationary phase) packed inside a capillary column, which  separates them temporarily.
 %
-This separated mixture can be then injected into an analytical instrument for compound identification, where ions peaks occurring at the same retention time as the parent ion correspond to product ions.
+This separated mixture can be then injected into an analytical instrument for compound identification, where ion peaks occurring at the same retention time as the parent ion correspond to product ions.
 %
-The main differences between GC and fastGC are that GC columns are tens of meters long, while fastGC ones are  10 meters long or less, and
+The main differences between  GC and fastGC are that GC columns are tens of meters long, while fastGC ones are  10 meters long or less, and
 %
 also that the heating ramp in fastGC  is up to forty times faster than in conventional GC systems.
 %
-These make possible to perform spectral analysis in less than one minute with  a fastGC add-on.
+These characteristics make possible to perform a fastGC analysis in few minutes.
 
 
 
-We have used the fastGC in conjunction with a PTR-ToF 8000 (IONICON Analytik GmbH, Austria) to study the reactions of several ketones with H$_3$O$^+$ \cite{malaskova2019compendium}, where this add-on was used to ease the ion identification as the purity of the ketones was in the range 97-99\% and also decomposition of the sample could have occurred during storage.
+The fastGC was used in conjunction with a PTR-ToF 8000 (IONICON Analytik GmbH, Austria) to study the reactions of several ketones with H$_3$O$^+$ \cite{malaskova2019compendium}.
+This add-on was used to ease the ion identification as the purity of the ketones was in the range 97 - 99\% and also decomposition of the sample could have occurred during storage.
 %
-This fastGC  is a modification of that used by \citeauthor{ruzsanyi2013multi} and \citeauthor{romano2014wine} \cite{ruzsanyi2013multi,romano2014wine}, so only the differences with these will be briefly mentioned here.
+This fastGC  is a modification of that used by \citeauthor{ruzsanyi2013multi} and \citeauthor{romano2014wine} \cite{ruzsanyi2013multi,romano2014wine}. Therefore only the differences with those will be briefly described here.
 %
 %The ketones were first introduced into a 0.5 ml sample loop  of passivated stainless steel.
 %
 The stationary phase in our system was a MXT-1 column (10 m × 0.53 mm, film thickness 0.25 µm, dimethyl polysiloxane phase, Restek, USA), which was heated from room temperature up to 240$^{\circ}$C in  2 minutes and 40 seconds.
 %
-Also, a a 10-port passivated valve (VICI AG, Switzerland) and a three-way gas valve made from polyether ether ketone (\acrshort{peek}) replaced the four three-way valves and  needle valve in the previous design.
+Also, a 10-port passivated valve (VICI AG, Switzerland) and a three-way gas valve made from polyether ether ketone (\acrshort{peek}) replaced the four three-way valves and  needle valve in the previous design.
 %
-In the oven which houses the drift tube, all sections of the inlet system are mounted to avoid cold spots.
+All sections of the inlet system are mounted in the oven which houses the drift tube to avoid cold spots.
 %
 This updated configuration allowed the sample loop to be constantly filled and the capillary column to be constantly back-flushing with the carrier gas.
 %
@@ -925,7 +1006,8 @@ The nebulisation process creates a stream of micro-droplets that is then injecte
 %
 This chamber is held at 100$^{\circ}$C to continue the process of evaporation, leading in a continuous flow of a known trace gas dilution that is then injected through a heated sampling line into the analytical instrument.
 
-We used the LCU to study the reactions of several ketones with H$_3$O$^+$ in humid conditions \cite{malaskova2019compendium}, where this add-on was not used to calibrate the instrument but to create a steady signal of ketones samples in humid conditions. % at 100\% relative humidity at 37$^{\circ}$C.
+The LCU was used to study the reactions of several ketones with H$_3$O$^+$ in humid conditions \cite{malaskova2019compendium}.
+This add-on was not used to calibrate the instrument but to create a steady signal of ketones samples in humid conditions. % at 100\% relative humidity at 37$^{\circ}$C.
 %The one used in this study was manufactured by \citeauthor{ioniconlcu} and it has been explained in detail by \citeauthor{fischerlcu} \cite{fischerlcu}.
 %
 The sampling vials, kept at 30$^{\circ}$C, contained  trace quantities of  ketones  diluted in 100 ml of purified water and were  connected to the liquid inlet of the LCU. The liquid sample flow was of 35 µl/min, which with the carrier gas (N$_2$) flow of 950 ml/min gave an absolute humidity of 5\%.

@@ -42,7 +42,8 @@
 %\usetikzlibrary{external}		%to speed up figures
 
 %maybe set maxnames=3 or remove the feature
-\usepackage[style=nature,sorting=none,sortcites=true,defernumbers=true,giveninits=true,hyperref,doi=false,eprint=false,url=false,isbn=false,maxnames=1,maxbibnames=99]{biblatex}	%chem-acs, %phys, %nature
+%\usepackage[style=nature,sorting=none,sortcites=true,defernumbers=true,giveninits=true,hyperref,doi=false,eprint=false,url=false,isbn=false,maxnames=1,maxbibnames=99]{biblatex}	%chem-acs, %phys, %nature
+\usepackage[style=chem-acs,sorting=none,sortcites=true,defernumbers=true,giveninits=true,hyperref,doi=false,eprint=false,url=false,isbn=false,maxnames=1,maxbibnames=99]{biblatex}	%chem-acs, %phys, %nature
 
 % To add all names in fullcite
 \preto\fullcite{\AtNextCite{\defcounter{maxnames}{99}}}

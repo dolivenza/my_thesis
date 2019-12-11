@@ -390,7 +390,7 @@ As mentioned  earlier, in the second half of the drift tube stack the electrode'
 %consist of a RLC circuit that
 provide the second half of the drift tube's electrodes with a signal of approximately 760 kHz and 200 V peak-to-peak in resonance that we will refer to as RF field (see \autoref{fig:rfif_simion}). At any given time, adjacent funnel plates are supplied with an RF field of opposite polarity. Also, this RF field can be turned on and off in the front panel of the instrument and when it is superimposed to the DC field, which is always on, the instrument is referred to as being operating in RF mode.
 %It is also key to properly tune the capacitance from plate 29 to avoid ``closing'' the funnel.
-Furthermore, in RF mode the reduced electric field, \textit{E/N}, cannot be used to refer to the collisional energy as in this mode the electric field  in the drift tube is no longer uniform. A comparison of the ion trajectories  in the second half of the drift tube in DC and RF modes is shown in \autoref{fig:rfif_vs_dc} for ions of \textit{m/z} 19 at a drift voltage of 200 V, which corresponds to around 120 Td in DC mode. The funnel effect can be observed on \autoref{fig:rfif_vs_dc}b, which reveals a higher ion density near the exit of the reactor than that in DC mode, even though fewer ions were flown in the RF mode simulations %to reduce simulation times 
+Furthermore, in RF mode the reduced electric field, \textit{E/N}, cannot be used to refer to the collisional energy as in this mode the electric field  in the drift tube is no longer uniform. A comparison of the ion trajectories  in the second half of the drift tube in DC and RF modes is shown in \autoref{fig:rfif_vs_dc} for ions of \textit{m/z} 19 at a drift voltage of 200 V, which corresponds to around 120 Td in DC mode. The funnel effect can be observed on \autoref{fig:rfif_vs_dc}(b), which reveals a higher ion density near the exit of the reactor than that in DC mode, even though fewer ions were flown in the RF mode simulations %to reduce simulation times 
 because this mode is computationally more demanding than DC mode.
 %
 \begin{figure}[t]
@@ -595,7 +595,7 @@ where \textit{m/z} is the mass-to-charge ratio, t is the ion's time-of-flight, a
 The analogue data acquired by the PTR-ToF-MS is translated into digital files by \acrshort{tdc} to be visualised and analysed  with the proper software. An experiment can consist in either a static measurement, yielding a stable signal throughout the experiment, or a transient measurement, where the ion signals are time-dependent. These different types of experiments are usually acquired as a mass spectrum  in the form of a Galactic .spc  file from Thermo Fisher Scientific\textsuperscript{\textregistered}, or as a temporal evolution of the mass spectrum, in the form of a binary .lst file, respectively.
 
 As mentioned earlier, a mass spectrum is the histogram-like plot of the counts of detected ions as a function of their \textit{m/z} which, in our case, is stored in .spc files.
-\autoref{fig:grams}a shows an example of a mass spectrum visualised with the Thermo Fisher Scientific\textsuperscript{\textregistered}  GRAMS/AI\textsuperscript{TM}  Spectroscopy Software, which is adapted by KORE Technology Ltd to be used with their equipment.
+\autoref{fig:grams}(a) shows an example of a mass spectrum visualised with the Thermo Fisher Scientific\textsuperscript{\textregistered}  GRAMS/AI\textsuperscript{TM}  Spectroscopy Software, which is adapted by KORE Technology Ltd to be used with their equipment.
 The software does the time to \textit{m/z} conversion following \autoref{eq:cal}.
 
 
@@ -605,7 +605,7 @@ Transient experiments are stored in %raw files called
  files  record the timestamp in microseconds of each event in three consecutive bytes in hexadecimal notation, with the most significant byte first, and they are accompanied by a text  (.ini) file containing information about the experiment.
 An event can be either the start of a cycle in the detector, always indicated by 0x000000 (i.e. t = 0 µs), or a detected ion (for instance, an ion detected at t = 12500 µs would be recorded as 0x0030D4).
  Therefore an .lst file holds all the information about the experiment and can be plotted as either a cumulative mass spectrum as a function of the \textit{m/z} or as a transient of selected ion signals as a function of the experiment time.
-The software GRAMS/AI\textsuperscript{TM} allows to open the .lst files as a mass spectrum, like that in \autoref{fig:grams}a, or as the time-evolution of some particular \textit{m/z}, as shown in \autoref{fig:grams}b. For the latter plot, the so-called regions of interest must be selected before starting the experiment 
+The software GRAMS/AI\textsuperscript{TM} allows to open the .lst files as a mass spectrum, like that in \autoref{fig:grams}(a), or as the time-evolution of some particular \textit{m/z}, as shown in \autoref{fig:grams}(b). For the latter plot, the so-called regions of interest must be selected before starting the experiment 
 to display targeted ion signals. 
 %, by selecting the left and right ends of intervals of interest whose ion count will be integrated, displayed and updated as the data is acquired.
 %This is  useful in conjunction with the TDU, as it will be explained in the .................... %results section.
@@ -679,7 +679,7 @@ With these considerations in mind, for the rest of this thesis when an ion's \te
 %It is also quite common to show the ion signal in normalised counts per second (\acrshort{ncps}) by normalising the ion signals to 10$^6$ counts of reagent ion signal. For this, the proton affinity of the analyte must be known because proton transfer from the water clusters can also occur and their ion signal must be considered when calculating the ncps. However, in most of this thesis  the data is shown in raw cps to ease the comparison with other instruments, after being usually repeated two times and subtracted the background signal.
 In  this thesis  the data is either given in branching percentages (also referred to as branching ratios, BR, or product ion distributions, PID) 
 or in raw counts per second, %cps to ease the comparison with other instruments,
-after being  repeated two times, averaged and background subtracted.
+after being  replicated two or three times, averaged and background subtracted.
 
 
 
@@ -795,7 +795,7 @@ The dead time recorded in the .ini file in this case refers to that given by the
 If the files are saved with the name format [\textit{low E/N}]-[\textit{high E/N}]-[\textit{file number}], the script automatically reads and writes in the output file the values of the low and high \textit{E/N}. If not, they must be manually added.
 %
 The data inside each frame can be exported in raw format or averaged.
-For steady experiments like the one shown in \autoref{fig:fss}a, the data from all the frames from a phase (i.e. high or low \textit{E/N}) can also be averaged like it is shown in this figure. Obviously, this does not make sense for transient measurements like that in \autoref{fig:fss}b.
+For steady experiments like the one shown in \autoref{fig:fss}(a), the data from all the frames from a phase (i.e. high or low \textit{E/N}) can also be averaged like it is shown in this figure. Obviously, this does not make sense for transient measurements like that in \autoref{fig:fss}(b).
 %
 Once the data analysis is finished, the results can be exported. The format these files are saved at allows easy double-y axis plot of the ion intensities and \textit{E/N} as a function of the experiment time, as it is shown in \autoref{fig:fss_plots}, for a (a,c) steady-state  and (b,d) transient measurement.
 
@@ -880,7 +880,7 @@ A thermal desorption unit (\acrshort{tdu})  like that engineered by KORE Technol
 This was applied by \citeauthor{RN445} to the detection of explosives %reaching limits of detection (\acrshort{lod}) of nanograms  
 and by \citeauthor{blenkhorn2019novel} to the detection polyaromatic hydrocarbons \cite{RN445,blenkhorn2019novel}.
 %
-This TDU works with polytetrafluoroethylene (\acrshort{ptfe}) swabs (ThermoFisher Scientific, Cheshire, UK) mounted in a cardboard frame (shown in \autoref{fig:tdu}a) onto which the targeted compounds are deposited.
+This TDU works with polytetrafluoroethylene (\acrshort{ptfe}) swabs (ThermoFisher Scientific, Cheshire, UK) mounted in a cardboard frame (shown in \autoref{fig:tdu}(a)) onto which the targeted compounds are deposited.
 %
 Then, the swab is inserted in the TDU, whose plates come together clamping the swab and creating a high-quality circular seal. The metal plates are kept at high temperature (150$^{\circ}$C) and a carrier gas is flown through their holes, pulling the analyte towards the inlet pipe, whose surfaces are passivated (treated with SilcoNert\textsuperscript{\textregistered} 2000) to minimise adsorption.
 %
@@ -888,7 +888,10 @@ This creates a desorption profile like the one in \autoref{fig:tdu_heroin}, wher
 %
 The duration of the desorption depends on many factors, being some of them the volatility of the analyte, the temperature of the inlet and TDU and the carrier gas flow.
 %
-It usually takes between 60 and 120 seconds for a sample to be completely desorbed into the instrument after the swab has been inserted in the TDU and its jaws have clamped together. After the measurement is finished, the TDU can be opened to extract the swab, which can be reused.
+The ion signal goes down to 10\% of the peak maximum in between 10 to 20 seconds, although
+it usually takes between 60 and 120 seconds for a sample to be completely desorbed into the instrument (i.e. to reach baseline) after the swab has been inserted in the TDU and its jaws have clamped together. 
+%
+After the measurement is finished, the TDU can be opened to extract the swab, which can be reused.
 
 
 
